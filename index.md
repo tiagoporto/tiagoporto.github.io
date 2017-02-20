@@ -2,13 +2,13 @@
 
 ## My Repositories
 
-- [Swill Boilerplate](http://swillboilerplate.rocks/) :star:
-- [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons/) :star:
-- [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf/) :star:
+- [Swill Boilerplate](http://swillboilerplate.rocks/)
+- [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons/)
+- [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf/)
 - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
-- [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos/) :star:
-- [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip) :star:
-- [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) :star:
+- [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos/)
+- [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip)
+- [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline)
 - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css/)
 - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
 - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
