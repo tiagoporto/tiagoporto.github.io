@@ -17,5 +17,5 @@
 
 ## Contact
 
-[site](http://www.tiagoporto.com/) - [blog](http://www.tiagoporto.com/blog/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [onde eu vim parar](http://www.ondeeuvimparar.com.br/) - [youtube](http://www.youtube.com/virtualdezign)
+[site](http://www.tiagoporto.com/) - [blog](http://www.tiagoporto.com/blog/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [onde eu vim parar](http://www.ondeeuvimparar.com.br/) - [youtube](http://www.youtube.com/virtualdezign)
 
