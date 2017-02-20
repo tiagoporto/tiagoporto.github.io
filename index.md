@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Welcome to my GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/tiagoporto/tiagoporto.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This are my repository
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Repositories
 
-### Markdown
+- [Swill Boilerplate](http://swillboilerplate.rocks/)
+- [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons/)
+- [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf/)
+- [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
+- [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos/)
+- [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip)
+- [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline)
+- [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css/)
+- [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
+- [Mobile Challenge](https://github.com/tiagoporto/desafio-mobile)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tiagoporto/tiagoporto.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
