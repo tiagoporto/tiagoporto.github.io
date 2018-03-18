@@ -1,9 +1,6 @@
-# [Tiago Porto](https://www.tiagoporto.com/site/v1/index.php)
-++++ Interface/type/graphic designer</br>
-++++++++++++++++ Web developer
+# Welcome to my GitHub Pages
 
-
-## My Repositories
+## Repositories
 
 - [Swill Boilerplate](http://swillboilerplate.rocks)
 - [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos)
