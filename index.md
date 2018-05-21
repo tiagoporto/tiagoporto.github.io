@@ -8,6 +8,7 @@
 - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf)
 - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
 - [Limit Lines](https://github.com/tiagoporto/limit-lines)
+- [React Chat](https://github.com/tiagoporto/react-chat)
 - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip)
 - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline)
 - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
@@ -19,5 +20,5 @@
 
 ## Contact
 
-[site](http://www.tiagoporto.com/) - [blog](http://www.tiagoporto.com/blog/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [onde eu vim parar](http://www.ondeeuvimparar.com.br/) - [youtube](http://www.youtube.com/virtualdezign)
+[site](http://www.tiagoporto.com/) - [blog](http://www.tiagoporto.com/blog/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
 
