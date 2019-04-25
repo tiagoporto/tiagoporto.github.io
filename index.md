@@ -7,20 +7,20 @@
 - Libs
   - [Swill Boilerplate](http://swillboilerplate.rocks)
   - [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons) - _Buttons to add/remove contrast and increase/decrease font size._
-  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF._
+  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF_
   - [Limit Lines](https://github.com/tiagoporto/limit-lines)
   - [Typerules](https://github.com/tiagoporto/typerules)
-  - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip)
-  - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline)
+  - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - _A jQuery plugin to replace <image> and <object> embed SVG inline_
+  - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip) - _Simple plugin to allow users to download multiple logotype image types_
 - Exercises
-  - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
-  - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css)
-  - [React Chat](https://github.com/tiagoporto/react-chat)
+  - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
+  - [React Chat](https://github.com/tiagoporto/react-chat) - _React chat with Socket.io Client_
   - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
-  - [inkitt](https://tiagoporto.github.io/inkitt) - _React search_
-  - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
+  - [React search](https://tiagoporto.github.io/inkitt) - _React search_
+  - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
   - [Conceitual Map Navigation](https://github.com/tiagoporto/conceitual-map-navigation)
-- Editor settings
+  - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
+- Editor Settings
   - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
   - [vscode-settings](https://github.com/tiagoporto/vscode-settings)
 
