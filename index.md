@@ -16,7 +16,7 @@
   - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
   - [React Chat](https://github.com/tiagoporto/react-chat) - _React chat with Socket.io Client_
   - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
-  - [React search](https://tiagoporto.github.io/inkitt) - _React search_
+  - [React search](https://tiagoporto.github.io/react-search) - _Search in React_
   - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
   - [Conceitual Map Navigation](https://github.com/tiagoporto/conceitual-map-navigation)
   - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
