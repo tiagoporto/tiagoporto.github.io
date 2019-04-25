@@ -8,7 +8,7 @@
   - [Swill Boilerplate](http://swillboilerplate.rocks)
   - [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons) - _Buttons to add/remove contrast and increase/decrease font size._
   - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF_
-  - [Limit Lines](https://github.com/tiagoporto/limit-lines)
+  - [Limit Lines](https://github.com/tiagoporto/limit-lines) - _A tool for check and report lines by file._
   - [Typerules](https://github.com/tiagoporto/typerules)
   - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - _A jQuery plugin to replace <image> and <object> embed SVG inline_
   - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip) - _Simple plugin to allow users to download multiple logotype image types_
