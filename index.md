@@ -5,9 +5,9 @@
 - Project
   - [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos) - _A collection of logos and symbols from bands, musicians and related in SVG._
 - Libs
+  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF_
   - [Swill Boilerplate](http://swillboilerplate.rocks)
   - [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons) - _Buttons to add/remove contrast and increase/decrease font size._
-  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF_
   - [Limit Lines](https://github.com/tiagoporto/limit-lines) - _A tool for check and report lines by file._
   - [Typerules](https://github.com/tiagoporto/typerules)
   - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - _A jQuery plugin to replace <image> and <object> embed SVG inline_
