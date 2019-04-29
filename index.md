@@ -22,7 +22,7 @@
   - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
 - Editor Settings
   - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
-  - [vscode-settings](https://github.com/tiagoporto/vscode-settings)
+  - [VSCode Settings](https://github.com/tiagoporto/vscode-settings)
 
 
 ## Contact
