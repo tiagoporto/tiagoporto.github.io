@@ -6,17 +6,18 @@
   - [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos) - _A collection of logos and symbols from bands, musicians and related in SVG._
 - Libs
   - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - *Biblioteca JS para gerar, validar e formatar CPF*
-  - [Swill Boilerplate](http://swillboilerplate.rocks)
   - [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons) - _Buttons to add/remove contrast and increase/decrease font size._
   - [Limit Lines](https://github.com/tiagoporto/limit-lines) - _A tool for check and report lines by file._
-  - [Typerules](https://github.com/tiagoporto/typerules)
+  - [Typerules](https://github.com/tiagoporto/typerules) - _A typography toolkit that sets vertical rhythm and provides type functions._
   - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip) - _Simple plugin to allow users to download multiple logotype image types_
   - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - *A jQuery plugin to replace <image> and <object> embed SVG inline*
+  - [Swill Boilerplate](http://swillboilerplate.rocks)
+
 - Exercises
-  - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
   - [React Chat](https://github.com/tiagoporto/react-chat) - _React chat with Socket.io Client_
-  - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
+  - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
   - [React search](https://tiagoporto.github.io/react-search) - _React book search_
+  - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
   - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
   - [Conceitual Map Navigation](https://github.com/tiagoporto/conceitual-map-navigation)
   - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
