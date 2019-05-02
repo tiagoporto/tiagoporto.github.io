@@ -10,7 +10,7 @@
   - [Limit Lines](https://github.com/tiagoporto/limit-lines) - _A tool for check and report lines by file._
   - [Typerules](https://github.com/tiagoporto/typerules) - _A typography toolkit that sets vertical rhythm and provides type functions._
   - [jQuery Logo Downloadtip](https://github.com/tiagoporto/jquery-logo-downloadtip) - _Simple plugin to allow users to download multiple logotype image types_
-  - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - *A jQuery plugin to replace <image> and <object> embed SVG inline*
+  - [jQuery SVG to Inline](https://github.com/tiagoporto/jquery-svg-to-inline) - *A jQuery plugin to replace \<image\> and \<object\> embed SVG inline*
   - [Swill Boilerplate](http://swillboilerplate.rocks)
 
 - Exercises
