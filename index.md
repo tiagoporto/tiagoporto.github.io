@@ -14,6 +14,7 @@
   - [Swill Boilerplate](http://swillboilerplate.rocks)
 
 - Exercises
+  - [Vue Todo](https://github.com/tiagoporto/vue-todo) - _Todo SPA in vuejs_
   - [React Chat](https://github.com/tiagoporto/react-chat) - _React chat with Socket.io Client_
   - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
   - [React search](https://tiagoporto.github.io/react-search) - _React book search_
