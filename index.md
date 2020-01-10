@@ -5,11 +5,11 @@
 - Project
   - [SVG Music Logos](http://tiagoporto.github.io/svg-music-logos) - _A collection of logos and symbols from bands, musicians and related in SVG._
 - Libs
-  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - *Biblioteca JS para gerar, validar e formatar CPF*
+  - [Gerador e Validador CPF](http://tiagoporto.github.io/gerador-validador-cpf) - _Biblioteca JS para gerar, validar e formatar CPF_
   - [Accessibility Buttons](http://tiagoporto.github.io/accessibility-buttons) - _Buttons to add/remove contrast and increase/decrease font size._
   - [Limit Lines](https://github.com/tiagoporto/limit-lines) - _A tool for check and report lines by file._
   - [Typerules](https://github.com/tiagoporto/typerules) - _A typography toolkit that sets vertical rhythm and provides type functions._
-  - [Logo Downloadtip](https://github.com/tiagoporto/logo-downloadtip) - _https://github.com/tiagoporto/logo-downloadtip_
+  - [Logo Downloadtip](https://tiagoporto.github.io/logo-downloadtip/) - _Web component to allow users download multiple logotype image types when they trying to grab low resolution logo._
   - [SVG to Inline](https://github.com/tiagoporto/svg-to-inline) - _Web Component to request an SVG file external and use inline._
   - [Swill Boilerplate](http://swillboilerplate.rocks)
 
@@ -29,5 +29,5 @@
 
 ## Contact
 
-[site](http://www.tiagoporto.com/) - [blog](http://www.tiagoporto.com/blog/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
+[site](http://www.tiagoporto.com/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
 
