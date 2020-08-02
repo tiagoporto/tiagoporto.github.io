@@ -23,7 +23,7 @@
 - Exercises
   - React
     - [React Chat](https://tiagoporto.github.io/react-chat/) - _React chat with Socket.io Client_
-    - [React search](https://tiagoporto.github.io/react-search) - _React book search_  
+    <! --- [React search](https://tiagoporto.github.io/react-search) - _React book search_  -->
     - [React Gallery](https://github.com/tiagoporto/react-gallery)
   - Vue
     - [Vue Todo](https://github.com/tiagoporto/vue-todo) - _Todo SPA in vuejs_
