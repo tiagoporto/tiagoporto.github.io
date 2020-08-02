@@ -13,17 +13,16 @@
   - [Typerules](https://github.com/tiagoporto/typerules) - _A typography toolkit that sets vertical rhythm and provides type functions._
   - [Logo Downloadtip](https://tiagoporto.github.io/logo-downloadtip/) - _Web component to allow users download multiple logotype image types when they trying to grab low resolution logo._
   - [SVG to Inline](https://github.com/tiagoporto/svg-to-inline) - _Web Component to request an SVG file external and use inline._
-  - [Swill Boilerplate](http://swillboilerplate.rocks)
+  - [Swill Boilerplate](https://github.com/tiagoporto/generator-swill-boilerplate)
   - [Redirect To App Stores](https://github.com/tiagoporto/redirect-to-app-stores)
 
 - Editor Settings
-  - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
   - [VSCode Settings](https://github.com/tiagoporto/vscode-settings)
-  
+  - [Setting Up Sublime Text](https://github.com/tiagoporto/setting-up-sublime-text)
 
 - Exercises
   - React
-    - [React Chat](https://github.com/tiagoporto/react-chat) - _React chat with Socket.io Client_
+    - [React Chat](https://tiagoporto.github.io/react-chat/) - _React chat with Socket.io Client_
     - [React search](https://tiagoporto.github.io/react-search) - _React book search_  
     - [React Gallery](https://github.com/tiagoporto/react-gallery)
   - Vue
