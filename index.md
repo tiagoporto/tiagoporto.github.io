@@ -31,7 +31,7 @@
     - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
     - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
     
-  - [Conceitual Map Navigation](https://github.com/tiagoporto/conceitual-map-navigation)
+  - [Conceptual Map Navigation](https://github.com/tiagoporto/conceptual-map-navigation)
   - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
   - [web-component-with-polymer](https://github.com/tiagoporto/web-component-with-polymer)
 
