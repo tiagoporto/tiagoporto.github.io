@@ -36,7 +36,6 @@
   - [web-component-with-polymer](https://github.com/tiagoporto/web-component-with-polymer)
 
 
-## Contact
+## Social
 
-[site](http://www.tiagoporto.com/) - [linkedin](http://br.linkedin.com/in/tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
-
+[site](http://www.tiagoporto.com/) - [linkedin](www.linkedin.com/in/tiagoporto) - [github](https://github.com/tiagoporto) - [NPM](https://www.npmjs.com/~tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
