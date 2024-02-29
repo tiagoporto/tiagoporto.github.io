@@ -28,14 +28,14 @@
   - Vue
     - [Vue Todo](https://github.com/tiagoporto/vue-todo) - _Todo SPA in vuejs_
   - CSS
-    - [Sign Of The Horns CSS](http://tiagoporto.github.io/sign-of-the-horns-css) - _Sign of the horns made with CSS_
+    - [🤘 Sign Of The Horns - Single DIV](https://github.com/tiagoporto/sign-of-the-horns-single-div) - _Sign of the horns made with CSS_
     - [Responsive Image Gallery](http://tiagoporto.github.io/responsive-image-gallery)
     
   - [Conceptual Map Navigation](https://github.com/tiagoporto/conceptual-map-navigation)
-  - [Mobile Challenge - Ionic app](https://github.com/tiagoporto/desafio-mobile)
+  - [📱 Ionic App - Mobile Meetup Challenge](https://github.com/tiagoporto/mobile-meetup-challenge)
   - [web-component-with-polymer](https://github.com/tiagoporto/web-component-with-polymer)
 
 
 ## Social
 
-[site](http://www.tiagoporto.com/) - [linkedin](www.linkedin.com/in/tiagoporto) - [github](https://github.com/tiagoporto) - [NPM](https://www.npmjs.com/~tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
+[tiagoporto.com](http://www.tiagoporto.com/) - [linkedin](www.linkedin.com/in/tiagoporto) - [github](https://github.com/tiagoporto) - [NPM](https://www.npmjs.com/~tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
