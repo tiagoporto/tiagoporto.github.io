@@ -2,6 +2,10 @@
   "name": "blog",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">= 20",
+    "npm": ">= 10"
+  },
   "scripts": {
     "prepare": "husky",
     "dev": "astro dev",
