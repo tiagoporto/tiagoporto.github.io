@@ -38,4 +38,4 @@
 
 ## Social
 
-[tiagoporto.com](http://www.tiagoporto.com/) - [linkedin](www.linkedin.com/in/tiagoporto) - [github](https://github.com/tiagoporto) - [NPM](https://www.npmjs.com/~tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
+[tiagoporto.com](https://www.tiagoporto.com/) - [linkedin](https://www.linkedin.com/in/tiagoporto) - [github](https://github.com/tiagoporto) - [NPM](https://www.npmjs.com/~tiagoporto) - [speakerdeck](https://speakerdeck.com/tiagoporto) - [instagram](https://www.instagram.com/beer_or_bust/)
