@@ -10,6 +10,7 @@
   },
   "packageManager": "pnpm@10.6.4",
   "scripts": {
+    "prepare": "husky",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -22,7 +23,10 @@
     "astro": "^5.5.6"
   },
   "devDependencies": {
-    "@tiagoporto/editor-config": "^1.4.0"
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@tiagoporto/editor-config": "^1.4.0",
+    "husky": "^9.1.7"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
