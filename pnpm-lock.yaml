@@ -20,6 +20,10 @@ importers:
       astro:
         specifier: ^5.5.6
         version: 5.5.6(rollup@4.38.0)(typescript@5.8.2)
+    devDependencies:
+      '@tiagoporto/editor-config':
+        specifier: ^1.4.0
+        version: 1.4.0
 
 packages:
 
@@ -465,6 +469,10 @@ packages:
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
+
+  '@tiagoporto/editor-config@1.4.0':
+    resolution: {integrity: sha512-j2OiGG0t4FXA+zpYRl9bZbpZErCA77PD6QBP9TEsLdrPcUoI/90W5vyrYFVY4ITMO+MCNIHYdmv13urhmUP2PQ==}
+    engines: {node: '>=18'}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
@@ -1930,6 +1938,8 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/vscode-textmate@10.0.2': {}
+
+  '@tiagoporto/editor-config@1.4.0': {}
 
   '@types/debug@4.1.12':
     dependencies:
