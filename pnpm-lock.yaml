@@ -27,6 +27,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.8.0
         version: 19.8.0
+      '@tiagoporto/dependabot-config':
+        specifier: ^1.5.2
+        version: 1.5.2
       '@tiagoporto/editor-config':
         specifier: ^1.4.0
         version: 1.4.0
@@ -551,6 +554,10 @@ packages:
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
+
+  '@tiagoporto/dependabot-config@1.5.2':
+    resolution: {integrity: sha512-NKeEipW+rugEl0libVnR/yQuZonGq7q/O3BFo+mP/ZXuERUSNLVuKbYVyEpxmjYYrSNT6WuKBAtQuO7QmCoqyQ==}
+    engines: {node: '>=18'}
 
   '@tiagoporto/editor-config@1.4.0':
     resolution: {integrity: sha512-j2OiGG0t4FXA+zpYRl9bZbpZErCA77PD6QBP9TEsLdrPcUoI/90W5vyrYFVY4ITMO+MCNIHYdmv13urhmUP2PQ==}
@@ -2381,6 +2388,8 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/vscode-textmate@10.0.2': {}
+
+  '@tiagoporto/dependabot-config@1.5.2': {}
 
   '@tiagoporto/editor-config@1.4.0': {}
 
