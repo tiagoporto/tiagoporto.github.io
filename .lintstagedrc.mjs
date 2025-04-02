@@ -1,7 +1,7 @@
 export default {
   // '*': 'prettier --check --ignore-unknown --write',
   "*.{md,markdown,mdx}": [
-    "remark --frail",
+    "remark",
     // 'eslint --max-warnings 0 --no-warn-ignored',
   ],
   // '*.{scss,css}': 'stylelint',

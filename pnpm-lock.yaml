@@ -34,8 +34,8 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
       '@tiagoporto/remark-config':
-        specifier: ^1.6.1
-        version: 1.6.1(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)
+        specifier: ^1.6.2
+        version: 1.6.2(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -622,8 +622,8 @@ packages:
     resolution: {integrity: sha512-j2OiGG0t4FXA+zpYRl9bZbpZErCA77PD6QBP9TEsLdrPcUoI/90W5vyrYFVY4ITMO+MCNIHYdmv13urhmUP2PQ==}
     engines: {node: '>=18'}
 
-  '@tiagoporto/remark-config@1.6.1':
-    resolution: {integrity: sha512-yQK3tJDOjFw6byhxkvlRxIEozEL9hvTV+a4OYQeKQZYaGedYW4HlfLu10xQb+ke1tKc0dKd/PlVlCQI8vTkKqA==}
+  '@tiagoporto/remark-config@1.6.2':
+    resolution: {integrity: sha512-p3j6nnHeWLnblgTkhfX1UXquIKznYIlEr9Wquuqa3Gq5ZMHD5Hu7OWSIQa6i9gW22h7T0vwwuCpr9g7fo0T7Qw==}
     engines: {node: '>=18'}
     peerDependencies:
       remark: ^15.0.0
@@ -3472,7 +3472,7 @@ snapshots:
 
   '@tiagoporto/editor-config@1.4.0': {}
 
-  '@tiagoporto/remark-config@1.6.1(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)':
+  '@tiagoporto/remark-config@1.6.2(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)':
     dependencies:
       remark: 15.0.1
       remark-cli: 12.0.1
