@@ -1,7 +1,7 @@
 export default {
-  // '*': 'prettier --check --ignore-unknown --write',
-  "*.{md,markdown,mdx}": [
-    "remark",
+  '*': 'prettier --check --ignore-unknown --write',
+  '*.{md,markdown,mdx}': [
+    'remark',
     // 'eslint --max-warnings 0 --no-warn-ignored',
   ],
   // '*.{scss,css}': 'stylelint',
@@ -11,4 +11,4 @@ export default {
   //   'eslint --max-warnings 0 --no-warn-ignored',
   //   'jest --bail --findRelatedTests --passWithNoTests',
   // ],
-};
+}

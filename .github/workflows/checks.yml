@@ -1,9 +1,7 @@
-name: Check Docs
+name: Checks
 
 on:
-  schedule:
-    # Run on the 1st of February, April, June, August, October, and December @ 00:00AM UTC-3
-    - cron: '0 3 1 FEB,APR,JUN,AUG,OCT,DEC *'
+  workflow_call:
   push:
     branches: [main]
   pull_request:
@@ -14,14 +12,14 @@ on:
       - ready_for_review # PR was converted from draft to open
 
 concurrency:
-  group: check-docs_${{ github.workflow }}_${{ github.event.pull_request.number || github.ref }}
+  group: checks_${{ github.workflow }}_${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
-  check_docs:
+  checks:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,5 +38,21 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
-      - name: Run Check Docs
-        run: pnpm check-docs
+      - name: Formatting Check
+        run: pnpm format:check
+
+      # - name: Typecheck
+      #   if: success() || failure()
+      #   run: pnpm typecheck
+
+      # - name: Lint Styles
+      #   if: success() || failure()
+      #   run: pnpm lint:styles
+
+      # - name: Lint
+      #   if: success() || failure()
+      #   run: pnpm lint
+
+      - name: Build Site
+        if: success() || failure()
+        run: pnpm build
