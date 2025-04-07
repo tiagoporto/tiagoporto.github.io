@@ -33,7 +33,7 @@
     "@tiagoporto/dependabot-config": "^1.5.2",
     "@tiagoporto/editor-config": "^1.4.0",
     "@tiagoporto/prettier-config": "^2.0.0",
-    "@tiagoporto/remark-config": "^1.6.2",
+    "@tiagoporto/remark-config": "^1.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
