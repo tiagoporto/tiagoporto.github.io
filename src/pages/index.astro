@@ -9,10 +9,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+      .avatar {
+        border-radius: 50%;
+        align-self: center;
+      }
+    </style>
   </head>
   <body>
     <Header />
     <main>
+      <img class="avatar" width={200} src="/public/tiagoporto.png" alt="" />
+
       <p>
         I'm a Front-end Engineer with 15+ years of experience developing web
         applications with UX and UI-oriented interfaces. My graphic design

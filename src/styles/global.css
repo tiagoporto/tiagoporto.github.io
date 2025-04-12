@@ -60,7 +60,7 @@ h6 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 3.052em;
+  font-size: 2.5em;
 }
 h2 {
   font-size: 2.441em;
@@ -104,6 +104,9 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+figcaption {
+  font-size: 80%;
 }
 code {
   padding: 2px 5px;
