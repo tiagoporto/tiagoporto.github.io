@@ -1,15 +1,20 @@
 ---
+import { useI18n } from '../i18n/utils'
+
 const today = new Date()
+const { t } = useI18n(Astro.url)
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Tiago Porto. All rights reserved.
+  &copy; {today.getFullYear()} Tiago Porto. {t('footer.allRights')}
   <div class="social-links">
     <a
       href="https://www.linkedin.com/in/tiagoporto/"
       target="_blank"
       rel="noopener noreferrer"
     >
+      <span class="sr-only">{t('footer.linkedin')}</span>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
@@ -29,7 +34,7 @@ const today = new Date()
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">Go to Tiago Porto's GitHub repo</span>
+      <span class="sr-only">{t('footer.github')}</span>
       <svg
         viewBox="0 0 16 16"
         aria-hidden="true"
@@ -49,7 +54,7 @@ const today = new Date()
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">Go to Letra Um's my fonts page</span>
+      <span class="sr-only">{t('footer.myFonts')}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 66 32"
@@ -110,7 +115,7 @@ const today = new Date()
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">Go to Tiago Porto's instagram page</span>
+      <span class="sr-only">{t('footer.instagram')}</span>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"

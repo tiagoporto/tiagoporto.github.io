@@ -1,17 +1,26 @@
 ---
 import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
+import { useI18n } from '../i18n/utils'
+import LanguagePicker from '../components/LanguagePicker.astro'
+
+const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2><a href={homeLink}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href={homeLink}>{t('nav.home')}</HeaderLink>
+      <HeaderLink href={tp('/blog')}>{t('nav.blog')}</HeaderLink>
+    </div>
+
+    <div class="internal-links">
+      <LanguagePicker />
     </div>
   </nav>
 </header>
+
 <style>
   header {
     margin: 0;
@@ -22,8 +31,6 @@ import { SITE_TITLE } from '../consts'
   h2 {
     margin: 0;
     font-size: 1em;
-    position: absolute;
-    left: 0;
   }
 
   h2 a,
@@ -33,7 +40,7 @@ import { SITE_TITLE } from '../consts'
   nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   nav a {
     padding: 1em 0.5em;
@@ -44,14 +51,5 @@ import { SITE_TITLE } from '../consts'
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
   }
 </style>

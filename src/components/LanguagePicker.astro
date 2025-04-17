@@ -1,0 +1,53 @@
+---
+import { useI18n } from '../i18n/utils'
+import { languages } from '../i18n/ui'
+const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
+
+const rOrHomeLink = r ? r : ''
+---
+
+<ul class="language-picker">
+  {
+    Object.entries(languages).map(([l, title]) => (
+      <li>
+        {l === lang ? (
+          <span class="active">{title}</span>
+        ) : (
+          <a href={tp(rOrHomeLink, l)}>{title}</a>
+        )}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .language-picker {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .language-picker li {
+    margin: 0;
+    padding: 0;
+  }
+  .language-picker a {
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  .language-picker li:first-child {
+    padding-right: 12px;
+    border-right: 1px solid #000;
+  }
+
+  .active {
+    color: var(--accent);
+  }
+  .language-picker li a:hover {
+    text-decoration: underline;
+  }
+</style>
