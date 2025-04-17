@@ -28,8 +28,6 @@
     "astro": "^5.5.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
     "@tiagoporto/dependabot-config": "^1.5.2",
     "@tiagoporto/editor-config": "^1.4.0",
     "@tiagoporto/prettier-config": "^2.0.0",
