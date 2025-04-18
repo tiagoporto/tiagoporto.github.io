@@ -2,7 +2,7 @@ import { base, configHelper } from '../config'
 import { ui, defaultLang, showDefaultLang, routes, languages } from './ui'
 
 export function getLangFromUrl(url: URL) {
-  const parts: string[] = url.pathname.split('/').filter(Boolean)
+  const parts: string[] = url.pathname?.split('/').filter(Boolean)
 
   if (parts.length === 0) {
     return defaultLang
@@ -49,7 +49,6 @@ type a = keyof typeof ui
 
 export function useTranslatedPath(lang: keyof typeof ui) {
   return function translatePath(path: string = '', l: string = lang) {
-    console.log('path: ', path, l)
     const isDefaultLang = !showDefaultLang && l === defaultLang
     const isEmpty = path === ''
 
