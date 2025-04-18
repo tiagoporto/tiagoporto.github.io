@@ -23,5 +23,6 @@ export const routes = {
       'blog.boas-praticas-e-automatizacao-de-tarefas-no-front-end-talk',
     'blog.hybrid-apps-with-ionic-you-can-start-developing-now-talk':
       'blog.aplicativos-hibridos-com-ionic-voce-tambem-pode-comecar-a-desenvolver-agora-talk',
+    'blog.saudade-typeface': 'blog.fonte-saudade',
   },
 }
