@@ -18,9 +18,11 @@ export async function GET(context) {
     title: `${SITE_TITLE} - Blog`,
     description: SITE_DESCRIPTION,
     site: context.site,
+    trailingSlash: false,
     items: posts.map((post) => ({
       ...post.data,
       link: `${tp('/blog')}${slugify(post.slug)}`,
     })),
+    customData: `<language>${lang}</language>`,
   })
 }
