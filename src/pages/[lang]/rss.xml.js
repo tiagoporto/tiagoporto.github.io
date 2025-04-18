@@ -13,7 +13,10 @@ export async function getStaticPaths() {
 export async function GET(context) {
   const { lang, tp } = useI18n(context.url)
 
-  const posts = await getCollection('blog', ({ id }) => id.startsWith(lang))
+  const posts = (await getCollection('blog', ({ id }) => id.startsWith(lang)))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .filter((p) => !p.data.draft)
+
   return rss({
     title: `${SITE_TITLE} - Blog`,
     description: SITE_DESCRIPTION,
