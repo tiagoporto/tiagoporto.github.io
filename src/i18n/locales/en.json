@@ -1,5 +1,6 @@
 {
   "nav": { "home": "Home", "blog": "Blog" },
+  "messages": { "emailCopied": "Email copied!" },
   "aboutMe": {
     "paragraph1": "I'm a Front-end Engineer with 15+ years of experience developing web applications with UX and UI-oriented interfaces. My graphic design degree gave me valuable knowledge that guided my work as a Front-end.",
     "paragraph2": "I've worked on multiple projects and companies where I had the opportunity to explore multiple skills, technologies, platforms, and methodologies.",
@@ -12,6 +13,7 @@
     "github": "Go to Tiago Porto's GitHub repo",
     "myFonts": "Go to Letra Um's MyFonts page",
     "instagram": "Go to Tiago Porto's Instagram profile",
-    "rss": "Follow Tiago Porto's Blog feed"
+    "rss": "Follow Tiago Porto's Blog feed",
+    "email": "Copy Tiago Porto's email"
   }
 }

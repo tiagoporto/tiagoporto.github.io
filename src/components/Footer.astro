@@ -148,6 +148,33 @@ const { t, tp } = useI18n(Astro.url)
         ></path>
       </svg>
     </a>
+
+    <button data-value="tiago@tiagoporto.com" id="email-link">
+      <span class="sr-only">{t('footer.email')}</span>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 38 32"
+        width="38"
+        height="32"
+        astro-icon="email"
+      >
+        <g fill="#61616B">
+          <path
+            d="M37.3,6.5v18.9c0,.4,0,.9-.3,1.2l-12.2-10.7,12.2-10.7c.2.4.3.8.3,1.2Z"
+          ></path>
+          <path
+            d="M34.3,3.5c.4,0,.9,0,1.3.3l-15.4,13.5c-.5.5-1.3.5-1.9,0L2.9,3.8c.4-.2.8-.3,1.3-.3h30.1Z"
+          ></path>
+          <path
+            d="M1.5,26.7c-.2-.4-.3-.8-.3-1.2V6.5c0-.4,0-.9.3-1.2l12.2,10.7L1.5,26.7Z"
+          ></path>
+          <path
+            d="M4.2,28.5c-.4,0-.9,0-1.3-.3l12.3-10.8,1.7,1.5c.7.6,1.5.9,2.3.9s1.6-.3,2.3-.9l1.7-1.5,12.3,10.8c-.4.2-.8.3-1.3.3H4.2Z"
+          ></path>
+        </g>
+      </svg>
+    </button>
   </div>
 </footer>
 
@@ -164,16 +191,47 @@ const { t, tp } = useI18n(Astro.url)
     gap: 1em;
     margin-top: 1em;
   }
-  .social-links a {
+  .social-links a,
+  .social-links button {
+    border: none;
+    padding: 0;
+    background: none;
     line-height: 0;
     text-decoration: none;
+    cursor: pointer;
   }
   .social-links path,
   .social-links circle {
     fill: rgb(var(--gray));
   }
   .social-links a:hover path,
+  .social-links button:hover path,
   .social-links a:hover circle {
     fill: revert-layer;
   }
 </style>
+
+<script>
+  import { useI18n } from '../i18n/utils'
+
+  document.addEventListener(
+    'astro:page-load',
+    () => {
+      const { t, tp } = useI18n(window.location)
+
+      document
+        .getElementById('email-link')
+        ?.addEventListener('click', (e: Event) => {
+          e.preventDefault()
+          const email = (e.currentTarget as HTMLAnchorElement)?.dataset.value
+
+          if (!email || !navigator.clipboard) {
+            return window.open('mailto:tiago@tiagoporto.com')
+          }
+          navigator.clipboard.writeText(email)
+          alert(t('messages.emailCopied'))
+        })
+    },
+    { once: false },
+  )
+</script>
