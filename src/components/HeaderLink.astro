@@ -5,8 +5,18 @@ import { useI18n } from '../i18n/utils'
 type Props = HTMLAttributes<'a'>
 
 const { href, class: className, ...props } = Astro.props
+const subHref = href?.match(/[^\/]+/g)
+
 const pathname = new URL(Astro.request.url).pathname
-const isActive = href === pathname
+const { tp, r } = useI18n(Astro.url)
+
+const currentPath = pathname === '/' ? tp(pathname) : pathname
+const subpath = pathname.match(/[^\/]+/g)
+
+const isEqual = currentPath.replaceAll('/', '') === href?.replaceAll('/', '')
+const isSubpath = subpath?.[1] === subHref?.[1]
+
+const isActive = isEqual || isSubpath
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
