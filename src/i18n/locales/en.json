@@ -1,4 +1,6 @@
 {
+  "mainMenu": "Main menu",
+  "languageSelector": "Language selector",
   "nav": { "home": "Home", "blog": "Blog" },
   "messages": { "emailCopied": "Email copied!" },
   "aboutMe": {

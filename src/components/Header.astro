@@ -8,16 +8,17 @@ const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
 ---
 
 <header>
-  <nav>
-    <h2><a href={homeLink}>{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href={homeLink}>{t('nav.home')}</HeaderLink>
-      <HeaderLink href={tp('/blog')}>{t('nav.blog')}</HeaderLink>
-    </div>
+  <h2><a href={homeLink}>{SITE_TITLE}</a></h2>
 
-    <div class="internal-links">
-      <LanguagePicker />
-    </div>
+  <nav role="menu" aria-label={t('mainMenu')}>
+    <ul class="links">
+      <li><HeaderLink href={homeLink}>{t('nav.home')}</HeaderLink></li>
+      <li><HeaderLink href={tp('/blog')}>{t('nav.blog')}</HeaderLink></li>
+    </ul>
+  </nav>
+
+  <nav role="navigation" aria-label={t('languageSelector')}>
+    <LanguagePicker />
   </nav>
 </header>
 
@@ -32,24 +33,32 @@ const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
     margin: 0;
     font-size: 1em;
   }
-
+  /*
   h2 a,
   h2 a.active {
     text-decoration: none;
-  }
+  }*/
+  header,
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  nav a {
+  header a {
     padding: 1em 0.5em;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
   }
-  nav a.active {
+  header a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+  }
+  .links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
   }
 </style>

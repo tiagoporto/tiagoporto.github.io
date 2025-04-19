@@ -41,7 +41,15 @@ export type PathsOf<
 
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: PathsOf<(typeof ui)[typeof defaultLang]>) {
-    return key.split('.').reduce((acc, curr) => acc[curr], ui[lang]) || key
+    const value =
+      key.split('.').reduce((acc, curr) => acc[curr], ui[lang]) || key
+    if (typeof value === 'string') {
+      return value
+    } else {
+      // handle the case where value is not a string
+      // for example, you could throw an error or return a default value
+      throw new Error(`Invalid translation key: ${key}`)
+    }
   }
 }
 

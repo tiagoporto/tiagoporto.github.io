@@ -10,11 +10,14 @@ const rOrHomeLink = r ? r : ''
   {
     Object.entries(languages).map(([l, title]) => (
       <li>
-        {l === lang ? (
-          <span class="active">{title}</span>
-        ) : (
-          <a href={tp(rOrHomeLink, l)}>{title}</a>
-        )}
+        <a
+          href={tp(rOrHomeLink, l)}
+          class:list={['link', { active: l === lang }]}
+          hreflang={l}
+          lang={l}
+        >
+          {title}
+        </a>
       </li>
     ))
   }
@@ -34,20 +37,20 @@ const rOrHomeLink = r ? r : ''
     margin: 0;
     padding: 0;
   }
-  .language-picker a {
-    color: var(--black);
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
   .language-picker li:first-child {
     padding-right: 12px;
     border-right: 1px solid #000;
   }
 
+  .link {
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
   .active {
     color: var(--accent);
   }
-  .language-picker li a:hover {
+  .link:hover {
     text-decoration: underline;
   }
 </style>
