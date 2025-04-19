@@ -33,6 +33,8 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Build website
+        env:
+          PUBLIC_GTAG_ID: ${{ vars.PUBLIC_GTAG_ID }}
         run: |
           pnpm build \
           --site "${{ steps.pages.outputs.origin }}" \
