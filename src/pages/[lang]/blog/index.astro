@@ -20,7 +20,7 @@ const posts = (await getCollection('blog', ({ id }) => id.startsWith(lang)))
   .filter((p) => !p.data.draft)
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Layout title={`${SITE_TITLE} | Blog`} description={SITE_DESCRIPTION}>
   <section>
     <ul>
       {

@@ -1,13 +1,12 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
-
-const { title, description } = Astro.props
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={`${title} | CV`} description={description} />
+    <BaseHead title={`${SITE_TITLE} | CV`} description={SITE_DESCRIPTION} />
     <meta http-equiv="refresh" content="0; url=/tiago-porto_cv.pdf" />
   </head>
   <body></body>

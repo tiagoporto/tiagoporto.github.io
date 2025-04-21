@@ -2,7 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
-import { SITE_DESCRIPTION } from '../../consts'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
 import { languages } from '../../i18n/ui'
 
 export async function getStaticPaths() {
@@ -15,9 +15,11 @@ export async function getStaticPaths() {
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title="Donation" description={SITE_DESCRIPTION} />
-  </head>
-  <body>
+    <BaseHead
+      title={`${SITE_TITLE} | Donation`}
+      description={SITE_DESCRIPTION}
+    />
+  </head><body>
     <Header />
     <main>
       <h1>Donation</h1>
