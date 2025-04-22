@@ -25,8 +25,7 @@ const rOrHomeLink = r ? r : ''
 
 <style>
   .language-picker {
-    font-size: 14px;
-    display: flex;
+    font-size: 18px;
     flex-wrap: wrap;
     gap: 1rem;
     list-style-type: none;
@@ -37,20 +36,33 @@ const rOrHomeLink = r ? r : ''
     margin: 0;
     padding: 0;
   }
-  .language-picker li:first-child {
-    padding-right: 12px;
-    border-right: 1px solid #000;
-  }
 
   .link {
     color: var(--black);
     text-decoration: none;
     transition: 0.2s ease;
   }
-  .active {
-    color: var(--accent);
-  }
   .link:hover {
     text-decoration: underline;
+  }
+  .active {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+
+  @media (min-width: 768px) {
+    .language-picker {
+      font-size: 14px;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+    .language-picker li:first-child {
+      padding-right: 12px;
+      border-right: 1px solid #000;
+    }
+    .active {
+      text-decoration: none;
+    }
   }
 </style>

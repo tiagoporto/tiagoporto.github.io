@@ -10,55 +10,165 @@ const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
 <header>
   <h2><a href={homeLink}>{SITE_TITLE}</a></h2>
 
-  <nav role="menu" aria-label={t('mainMenu')}>
-    <ul class="links">
-      <li><HeaderLink href={homeLink}>{t('nav.home')}</HeaderLink></li>
-      <li><HeaderLink href={tp('/blog')}>{t('nav.blog')}</HeaderLink></li>
-    </ul>
-  </nav>
+  <button class="menu-btn" id="menu-btn">Menu</button>
 
-  <nav role="navigation" aria-label={t('languageSelector')}>
-    <LanguagePicker />
-  </nav>
+  <div class="container-menu">
+    <nav role="menu" aria-label={t('mainMenu')}>
+      <ul class="links">
+        <li><HeaderLink href={homeLink}>{t('nav.home')}</HeaderLink></li>
+        <li><HeaderLink href={tp('/blog')}>{t('nav.blog')}</HeaderLink></li>
+      </ul>
+    </nav>
+
+    <nav
+      role="navigation"
+      aria-label={t('languageSelector')}
+      class="language-nav"
+    >
+      <LanguagePicker />
+    </nav>
+  </div>
 </header>
 
+<div class="overlay"></div>
+
+<script>
+  document.addEventListener(
+    'astro:page-load',
+    () => {
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        document.body.classList.toggle('menu-open')
+      })
+
+      document.querySelector('.overlay').addEventListener('click', function () {
+        document.body.classList.remove('menu-open')
+      })
+    },
+    { once: false },
+  )
+</script>
+
 <style>
+  :global(.menu-open) {
+    overflow: hidden;
+  }
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(var(--black), 100%);
+    transition: opacity 0.6s ease;
+    visibility: hidden;
+
+    .menu-open & {
+      @media screen and (max-width: 767px) {
+        opacity: 80%;
+        visibility: visible;
+      }
+    }
+  }
   header {
     margin: 0;
     padding: 0 1em;
+    min-height: 60px;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   h2 {
     margin: 0;
     font-size: 1em;
   }
-  /*
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }*/
-  header,
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: large;
   }
+
   header a {
-    padding: 1em 0.5em;
+    padding: 0 0.5em;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
   }
-  header a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
   .links {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 767px) {
+    .container-menu {
+      position: fixed;
+      left: 0;
+      top: 100vh;
+      height: calc(100vh - 80px);
+      border-radius: 20px 20px 0 0;
+      background: white;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 60px;
+      transition: top 1s ease;
+      box-shadow: 2px 5px 20px black;
+      overflow: auto;
+
+      .menu-open & {
+        top: 80px;
+      }
+    }
+
+    header a {
+      font-size: 26px;
+    }
+
+    .language-nav {
+      margin: 80px 0 100px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    header {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 2fr;
+    }
+    .menu-btn {
+      display: none;
+    }
+    .container-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .links {
+      display: flex;
+    }
+    header a {
+      padding: 1em 0.5em;
+    }
+    header a.active {
+      text-decoration: none;
+      border-bottom-color: var(--accent);
+    }
+
+    .language-nav {
+      justify-content: end;
+    }
   }
 </style>
