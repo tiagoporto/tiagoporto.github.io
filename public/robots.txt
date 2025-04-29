@@ -5,5 +5,5 @@ User-agent: *
 Allow: /
 Disallow: /cv
 
-Sitemap: https://tiagoporto.com/sitemap-index.xml
+Sitemap: https://tiagoporto.com/sitemap.xml
 
