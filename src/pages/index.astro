@@ -1,5 +1,4 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import Layout from '../layouts/Layout.astro'
 import { languages } from '../i18n/ui'
 import { useI18n } from '../i18n/utils'
@@ -13,27 +12,23 @@ export async function getStaticPaths() {
 const { t } = useI18n(Astro.url)
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <img class="avatar" height={200} width={200} src="/tiagoporto.png" alt="" />
+<Layout title={t('site.title')} description={t('site.description')}>
+  <div class="container">
+    <img class="avatar" height={200} width={200} src="/tiagoporto.png" alt="" />
 
-  <p>
-    {t('aboutMe.paragraph1')}
-  </p>
-
-  <p>
-    {t('aboutMe.paragraph2')}
-  </p>
-
-  <p>
-    {t('aboutMe.paragraph3')}
-  </p>
-
-  <p>
-    {t('aboutMe.paragraph4')}
-  </p>
+    <p class="center">
+      {t('aboutMe.paragraph1')}
+    </p>
+  </div>
 </Layout>
 
 <style>
+  .container {
+    min-height: 400px;
+  }
+  .center {
+    text-align: center;
+  }
   .avatar {
     display: block;
     margin: 0 auto;

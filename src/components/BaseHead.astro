@@ -5,15 +5,13 @@ import '../styles/global.css'
 import { getLanguageAlternatives, useI18n } from '../i18n/utils'
 import { ClientRouter } from 'astro:transitions'
 
-import { SITE_TITLE } from '../consts'
-
 interface Props {
   title: string
   description: string
   image?: string
 }
 
-const { tp } = useI18n(Astro.url)
+const { tp, t } = useI18n(Astro.url)
 
 const languageAlternatives = Astro.site
   ? getLanguageAlternatives(Astro.url, Astro.site)
@@ -31,7 +29,7 @@ const { title, description, image = '/blog-placeholder.jpg' } = Astro.props
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={SITE_TITLE}
+  title={t('site.title')}
   href={new URL(`${tp('/')}rss.xml`, Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />

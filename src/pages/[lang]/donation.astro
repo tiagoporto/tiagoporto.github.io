@@ -2,8 +2,11 @@
 import BaseHead from '../../components/BaseHead.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
+import { useI18n } from '../../i18n/utils'
+
 import { languages } from '../../i18n/ui'
+
+const { t } = useI18n(Astro.url)
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => {
@@ -16,8 +19,8 @@ export async function getStaticPaths() {
 <html lang="en">
   <head>
     <BaseHead
-      title={`${SITE_TITLE} | Donation`}
-      description={SITE_DESCRIPTION}
+      title={`${t('site.title')} | Donation`}
+      description={t('site.description')}
     />
   </head><body>
     <Header />

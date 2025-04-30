@@ -1,6 +1,5 @@
 ---
 import HeaderLink from './HeaderLink.astro'
-import { SITE_TITLE } from '../consts'
 import { useI18n } from '../i18n/utils'
 import LanguagePicker from '../components/LanguagePicker.astro'
 
@@ -8,7 +7,7 @@ const { lang, t, tp, homeLink, r } = useI18n(Astro.url)
 ---
 
 <header>
-  <h2><a href={homeLink}>{SITE_TITLE}</a></h2>
+  <h2><a href={homeLink}>{t('site.title')}</a></h2>
 
   <button class="menu-btn" id="menu-btn">Menu</button>
 

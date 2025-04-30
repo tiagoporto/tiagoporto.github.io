@@ -1,12 +1,17 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import { useI18n } from '../i18n/utils'
+
+const { t } = useI18n(Astro.url)
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={`${SITE_TITLE} | CV`} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title={`${t('site.title')} | CV`}
+      description={t('site.description')}
+    />
     <meta http-equiv="refresh" content="0; url=/tiago-porto_cv.pdf" />
   </head>
   <body></body>

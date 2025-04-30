@@ -1,6 +1,5 @@
 import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
 import { useI18n } from '../../i18n/utils'
 import { languages } from '../../i18n/ui'
 import { slugify } from '../../utils'
@@ -11,15 +10,15 @@ export async function getStaticPaths() {
   })
 }
 export async function GET(context) {
-  const { lang, tp } = useI18n(context.url)
+  const { lang, tp, t } = useI18n(context.url)
 
   const posts = (await getCollection('blog', ({ id }) => id.startsWith(lang)))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .filter((p) => !p.data.draft)
 
   return rss({
-    title: `${SITE_TITLE} - Blog`,
-    description: SITE_DESCRIPTION,
+    title: `${t('site.title')} - Blog`,
+    description: t('site.description'),
     site: context.site,
     trailingSlash: false,
     items: posts.map((post) => ({

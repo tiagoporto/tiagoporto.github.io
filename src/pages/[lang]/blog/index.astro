@@ -1,5 +1,4 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts'
 import { getCollection } from 'astro:content'
 import FormattedDate from '../../../components/FormattedDate.astro'
 import Layout from '../../../layouts/Layout.astro'
@@ -7,7 +6,7 @@ import { languages } from '../../../i18n/ui'
 import { useI18n } from '../../../i18n/utils'
 import { slugify } from '../../../utils'
 
-const { lang, tp } = useI18n(Astro.url)
+const { lang, tp, t } = useI18n(Astro.url)
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => {
@@ -20,7 +19,7 @@ const posts = (await getCollection('blog', ({ id }) => id.startsWith(lang)))
   .filter((p) => !p.data.draft)
 ---
 
-<Layout title={`${SITE_TITLE} | Blog`} description={SITE_DESCRIPTION}>
+<Layout title={`${t('site.title')} | Blog`} description={t('site.description')}>
   <section>
     <ul>
       {
