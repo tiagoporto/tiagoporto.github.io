@@ -58,6 +58,11 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
       .last-updated-on {
         font-style: italic;
       }
+      .author {
+        text-align: right;
+        font-size: 0.9em;
+        margin: 0;
+      }
     </style>
   </head>
 
@@ -73,9 +78,8 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
           }
         </div> -->
         <div class="prose">
-          <div class="title">
+          <header class="title">
             <h1>{title}</h1>
-            <!-- <p>{author}</p> -->
             <div class="date">
               <FormattedDate date={pubDate} />
               {
@@ -87,7 +91,9 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
               }
             </div>
             <hr />
-          </div>
+            <p class="author">{author}</p>
+          </header>
+
           <slot />
         </div>
       </article>
