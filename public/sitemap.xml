@@ -72,4 +72,8 @@
   <url>
     <loc>https://tiagoporto.com/pt-br/blog/fonte-saudade</loc>
   </url>
+  <url>
+    <loc>
+      https://tiagoporto.com/pt-br/blog/otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs</loc>
+  </url>
 </urlset>
