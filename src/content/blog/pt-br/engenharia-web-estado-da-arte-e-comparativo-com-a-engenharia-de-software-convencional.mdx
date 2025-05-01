@@ -1,0 +1,247 @@
+---
+draft: false
+title: 'Engenharia Web: estado da arte e comparativo com a engenharia de software convencional'
+author: 'Igor Alves Perdigão Reis, Tiago Porto'
+description: 'A crescente utilização da Internet e consequentemente da Web começa a transformar
+o mercado dos sistemas de informação. Entretanto, a capacidade de gerir e planejar
+estes sistemas cada vez maiores e mais complexos não acompanha...'
+pubDate: 'Dec 5 2010'
+heroImage: '/blog/web-engineering/web-engineering-multidisciplinarity.png'
+heroCaption: ''
+---
+
+A crescente utilização da Internet e consequentemente da Web começa a transformar
+o mercado dos sistemas de informação. Entretanto, a capacidade de gerir e planejar
+estes sistemas cada vez maiores e mais complexos não acompanha este crescimento.
+Percebe-se que ainda não há, na maioria das vezes, um processo bem definido e
+organizado, sendo o modelo ad hoc o mais utilizado. Portanto, faz-se necessária a
+criação de uma disciplina que possa atender às características específicas das
+aplicações baseadas na Web, a Engenharia Web (WebE). Neste artigo a engenharia e
+as características das aplicações Web são discutidas através de uma revisão de
+literatura, além disso, um comparativo com a Engenharia de Software convencional
+e a WebE também é apresentado.
+
+## 1 Introdução
+
+A Word-Wide-Web (WWW) é um meio relativamente novo, mas que sofre mudanças a todo
+instante. Apesar da novidade, ela já se instalou em nossas vidas e vem sendo
+utilizada amplamente por organizações pelo mundo, quebrando barreiras internacionais.
+O impacto significante e a grande importância adquirida, seja no mundo corporativo
+ou até mesmo fora dele, em páginas pessoais, na educação e no setor de entretenimento,
+fez com que a demanda de aplicações nesse meio crescesse exponencialmente.
+
+Para suprir o desenvolvimento dessas aplicações, a grande maioria dos desenvolvedores
+acaba sendo obrigada a escolher o modelo ad hoc de desenvolvimento, por falta de
+uma metodologia específica. Tais aplicações são desenvolvidas de forma caótica e
+dando margem para erros e falhas que comprometem a integridade do sistema, além
+da deficiência na documentação do produto e do processo.
+
+Para tentar cobrir essa lacuna, uma nova área do saber foi criada, a Engenharia
+Web (Web Engineering), que incorpora princípios do desenvolvimento de software
+padrão, buscando entender as necessidades específicas da Web e assim solucionar
+os problemas relacionados ao desenvolvimento. Tendendo a criação de um modelo de
+processo com ciclo de desenvolvimento repetível e eficiente, e produzindo uma
+metodologia de avaliação adequada, que contribua com a compreensão e melhora da
+qualidade das aplicações Web.
+
+Muitos aspectos relativos ao desenvolvimento Web o tornam diferente ao de um software
+tradicional. Temos a escalabilidade de seus requisitos e a necessidade das mudanças
+contínuas em seu conteúdo como os dois atributos-chave citados por [Ginige (2001)](#ginige-2001).
+De extrema relevância temos a multidisciplinaridade, e entre as características
+críticas temos a segurança, a usabilidade e também a manutenabilidade.
+
+Além disso, no processo de produção para uma aplicação Web, é necessário o esforço
+integrado de profissionais de várias áreas do saber. À medida que aumentam a
+complexidade e sofisticação dos novos sistemas, uma melhor abordagem sistemática,
+controle de qualidade e garantia são exigidos, e uma melhor metodologia contribui
+para um desenvolvimento harmônico, estruturado e bem integrado nos aspectos multidisciplinares.
+
+## 2 Características do desenvolvimento de Aplicações Web
+
+Para [Pressman (2006)](#pressman-2006), uma aplicação Web pode ser desde uma simples
+página, a um Web Site completo. Esses sistemas são orientados a documentos que
+contenham páginas estáticas ou dinâmicas, e são centrados na aparência e nas sensações.
+Tais aplicações se aproveitam do meio e fazem uma interligação dos conteúdos existentes,
+dando ao usuário final acesso fácil para edição e criação do mesmo, sustentados por
+ferramentas amplamente difundidas. Seus provedores são Web designer, redatores, dentre outros.
+
+[Powel (1998)](#powel-1998) relata que a mistura encontrada em sistemas Web,
+envolve a publicação impressa e o desenvolvimento de software, entre o marketing
+e a computação, entre as comunicações internas e as relações externas e entre a
+arte e a tecnologia.
+Mencionada a natureza da engenharia Web, sua equipe é obrigatoriamente multidisciplinar,
+abrangendo áreas como interação homem-computador, interface com o usuário, análise
+de sistemas e design, engenharia de software, engenharia de requisitos, engenharia
+de hipermídia, engenharia de requisitos, testes, modelagem e simulação e
+gerenciamento de projetos, bem como ciências sociais, artes gráficas e projeto
+(Figura 1) ([Murugesan, 1999](murugesan-1999)).
+
+<figure>
+  <img
+    src="/blog/web-engineering/multidisciplinaridade-da-engenharia-web.svg"
+    alt="Web Engineering Fields"
+  />
+  <figcaption>Figura 1. Engenharia Web – Um campo multidisciplinar</figcaption>
+</figure>
+
+O processo de desenvolvimento para Web apresentado por [Rodriguez (2002)](#rodriguez-2002), divide
+o processo em dois sub-processos:
+
+- sub-processo de autoria, onde ocorre a estruturação de hipermídia.
+- sub-processo de desenvolvimento de infraestrutura, onde é feita integração com
+  base de dados, programação, etc.
+
+Ambos os processos são realizadas nos fluxos de trabalho do processo de desenvolvimento
+de software convencional. Já a proposta de [Ward e Kroll (1999)](#ward-kroll-1999) para o desenvolvimento
+de aplicações Web é a unificação do processo criativo de design ao de engenharia
+de software proposto pelo Rational Unified Process (RUP). Para isso é usada a
+modelagem de requisitos, baseada em casos de uso, com a abordagem focada em aspectos
+de autoria, com diagramas de navegação, conteúdo e layout de interfaces. Estudos
+também apontam que o desenvolvimento pode ser feito em paralelo, adotando-se um
+processo que separa as atividades relacionadas aos aspectos de autoria e de
+infraestrutura em sub-processos paralelos.
+
+Outra característica das aplicações que estão sendo discutidas é o curto ciclo
+de vida da fase de desenvolvimento. A exigência do mercado para que os sistemas
+estejam disponíveis o mais breve possível contribuí para tal aspecto. Por tratar-se
+de alcance global, as aplicações Web possuem grande concorrência e qualquer tempo
+desperdiçado pode culminar em prejuízos.
+
+Por ser um ambiente complexo e dinâmico a avaliação dessas aplicações é dificultada.
+Com a diversidade de objetivos, diferentes aspectos são avaliados. Para uma boa avaliação
+da qualidade final das Aplicações Web, adotamos características tais como funcionalidade,
+usabilidade, confiabilidade, eficiência, manutenabilidade e portabilidade ([ISO91](#iso91)).
+Já em outro modelo de avaliação proposto é sugerido que o desenvolvimento das aplicações
+Web é um esforço contínuo e que progride através de diversos estágios definidos.
+Suas fases de desenvolvimento são: conceitualização, desenvolvimento, implementação
+e avaliação. Sendo que estas fases são interligadas constituindo-se um ciclo recorrente.
+
+Portanto, a criação de uma disciplina que seja capaz de avaliar esta qualidade e
+acompanhar todos os processos que envolvem a construção de sistemas para Web se
+faz necessária. Na sessão seguinte será abordada esta emergente disciplina, a Engenharia Web.
+
+## 3 Engenharia Web
+
+Como dito anteriormente, nos últimos anos, os sistemas Web estão tornando-se cada
+vez maiores e mais complexos. Além disso, para desenvolver estes sistemas, é
+necessária uma equipe heterogênea, com grande variedade de conhecimentos e
+habilidades ([Ginige, 2002](#ginige-2002)). Por estes motivos, é essencial a utilização de uma
+metodologia que seja capaz de gerir esta equipe e todo o processo que tange a construção das aplicações.
+
+A Engenharia Web (WebE – da sigla em inglês Web Engineering), caracteriza-se como
+uma disciplina emergente ([Ahmad, 2005](#ahmad-2005)) cujo objetivo é possibilitar o desenvolvimento,
+implantação e manutenção de aplicações baseadas na Web. Utiliza abordagens sistemáticas
+e princípios científicos de gerenciamento ([Murugesan, 1999](murugesan-1999)) para a construção destas
+aplicações. Dentre os seus objetivos encontram-se a facilitação da manutenibilidade
+e escalabilidade, minimização dos riscos e principalmente a melhoria e garantia
+da qualidade do produto de software Web.
+
+Desde 1998, vêm ocorrendo workshops e conferências que abordam a WebE. A crescente
+utilização da Internet e a ampliação dos sistemas Web não só nos computadores pessoais
+como também nos dispositivos móveis faz com que haja uma preocupação cada vez maior
+com o processo de desenvolvimento deste tipo de sistema. A variedade das tecnologias,
+a multidisciplinaridade, além da contínua evolução e volatilidade dos requisitos que
+os sistemas Web apresentam são características importantes quando se discute a engenharia Web.
+
+Segundo [Pressman (2000)](#pressman-2000), as seguintes atividades devem ser consideradas
+quando o assunto é a WebE: formulação, planejamento, análise, modelagem, geração
+de página e teste, além da avaliação do cliente. Ainda segundo o autor, estas atividades
+devem ser realizadas de maneira iterativa à medida que o sistema evolui.
+
+A WebE segue conceitos e princípios da engenharia de software tradicional enfatizando
+as mesmas técnicas e atividades de gestão ([Ahmad, 2005](#ahmad-2005)). Apesar de possuírem
+atividades em comum, a engenharia Web não é um “clone” da engenharia de software
+([Pressman, 1986](#pressman-1986)). As diferenças entre as duas disciplinas serão explicitadas a seguir.
+
+## 4 Engenharia Web vs. Engenharia de Software
+
+Neste capítulo serão apresentadas diferenças entre a engenharia Web e a engenharia
+de software. Mesmo que o objetivo de ambas seja a programação e o desenvolvimento
+de sistemas, a WebE apresenta novos desafios ([Ginige, 2001)](#ginige-2001)). A principal diferença
+é a multidisciplinaridade que as aplicações baseadas na Web apresentam.
+
+Segundo [Ginige (2001)](#ginige-2001), esta multidisciplinaridade resulta na contribuição para
+áreas como engenharia de hipermídia e hipertexto, desenvolvimento de interfaces,
+interação homem-computador, engenharia da informação, design gráfico e áreas afins.
+Por este motivo, [McDonald, 2001](#mcdonald-2001) conclui que a engenharia Web deve levar em conta
+os diferentes tipos de profissionais envolvidos no processo garantindo que cada um
+entenda seu papel e responsabilidade. Além disso, deve ser capaz de resolver os
+conflitos dos limites destes papéis e responsabilidades levando em conta o que é melhor para o projeto.
+
+[McDonald, 2001](#mcdonald-2001) ainda discute sobre outras características que a engenharia Web
+deve possuir para atender as demandas que uma aplicação Web exige e que se diferenciam
+da engenharia de software:
+
+- Devido ao curto ciclo de desenvolvimento e curtos prazos para entrega do produto
+  final bem menores que aplicações desktop, a engenharia Web deve ser capaz de lidar com esta pressão.
+- Por ser ligada não somente ao desenvolvimento em si, mas também ser orientada
+  ao conteúdo a engenharia Web deve preocupar-se também com o desenvolvimento dos
+  dados e da informação bem como o relacionamento entre eles.
+- As equipes devem ser quebradas em partes menores assim como em um processo de
+  desenvolvimento de software convencional.
+- Entretanto, estas equipes devem poder ir além dos seus pares de trabalho e além
+  de seus projetos para evitar esforços redundantes e garantir consistência.
+- Deve haver um foco maior na fase de análise e avaliação e nas fases de requisitos e testes.
+- Deve ser independente de tecnologia e ferramentas devido à rápida e contínua evolução das mesmas.
+
+Além das características apresentadas é importante ressaltar que a Engenharia Web
+deve ter um foco maior para a segurança e qualidade do que a engenharia convencional.
+O fato de estarem disponíveis em uma rede de alcance mundial – a Internet – faz com
+que ataques sejam mais frequentes e qualquer brecha de sistema pode ser fatal.
+A segurança está diretamente ligada à qualidade que depende da aplicação de uma
+engenharia e processo bem definidos.
+
+## 5 Conclusões
+
+O crescimento e a complexidade das aplicações baseadas na Web preocupam àqueles
+que trabalham e pesquisam esta área. Por este motivo, a utilização da Engenharia
+Web vem sendo cada vez mais discutida e pesquisada. Apesar de ser uma disciplina
+praticamente recente sua importância já é destacada.
+
+Existem diferenças entre a WebE e a engenharia de software convencional. Estas
+diferenças ocorrem devido à natureza das aplicações Web. As mesmas exigem um prazo
+de desenvolvimento mais curto, envolvem diversas áreas de conhecimento – são
+multidisciplinares, possuem um foco maior na informação e estão em constante evolução.
+
+Por estes motivos, a Engenharia Web caracteriza-se por ser bastante flexível. Deve
+ser independente de tecnologia, capaz de gerir as diversificadas equipes, focar
+na análise e planejamento para que problemas possam ser evitados. Além disso,
+deve abranger não só o desenvolvimento de software em sim como também a segurança,
+o design e o desenvolvimento e apresentação da informação.
+
+## 6. References
+
+{/* prettier-ignore */}
+- <span id="ahmad-2005">Ahmad, R.; Zhang Li; Azam, F.; “Web engineering: a new
+  emerging discipline,” Emerging Technologies, 2005. Proceedings of the IEEE
+  Symposium on , vol., no., pp. 445-450, 17-18 Set. 2005.</span>
+- <span id="ginige-2002">Athula Ginige. 2002. Web engineering: managing the
+  complexity of web systems development. In Proceedings of the 14th
+  international conference on Software engineering and knowledge engineering
+  (SEKE ’02). ACM, New York, NY, USA, 721-729.</span>
+- <span id="ginige-2001">Ginige, A.; Murugesan, S.; , “Web engineering: an
+  introduction,” Multimedia, IEEE, vol.8, no.1, pp.14-18, Jan-Mar 2001.</span>
+- <span id="iso91">ISO/IEC 9126 Standard for Information Technology, Software Product
+  Evaluation – Quality Characteristics and Guidelines for their use, Geneve,1991.</span>
+- <span id="mcdonald-2001">McDonald A., Welland R.: Web Engineering in
+  Practice, Proceedings of the Fourth WWW10 Workshop on Web Engineering, 21-30,
+  (1 May 2001).</span>
+- <span id="murugesan-1999">Murugesan, S. et al. (1999). Web engineering: A New
+  Discipline for Development of Web-based systems. InProceedings of the First
+  ICSE Workshop on Web Engineering, Los Angeles (pp. 1-9).What a Tangled Web We
+  Weave.</span>
+- <span id="powel-1998">Powell, T.A, Web Site Engineering: Beyound Web Page
+  Design, Prentice Hall, 1998.</span>
+- <span id="pressman-2006">Pressman, R. Engenharia de Software, McGraw Hill, 6a
+  ed., 2006.</span>
+- <span id="pressman-2000">Pressman, R.S.; , “What a tangled Web we weave [Web
+  engineering],” Software, IEEE, vol.17, no.1, pp.18-21, Jan/Feb 2000</span>
+- <span id="pressman-1986">Pressman. 1986. Software Engineering: a
+  Practitioner’s Approach (4th Ed.). McGraw-Hill, Inc., New York, NY, USA.</span>
+- <span id="rodriguez-2002">Rodriguez, D.; Harrison, R. & Satpathy, M. A
+  Generic Model and Tool Support for Assessing and Improving Web Processes”.
+  Proceedings of the Eighth IEEE Symposium on Software Metrics. IEEE, 2002.</span>
+- <span id="ward-kroll-1999">Ward, S. & Kroll, P. Building Web Solutions with
+  the Rational Unified Process: Unifying the creative design process and the
+  software engineering process. Context Integration Inc and Rational Software.
+  1999.</span>
