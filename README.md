@@ -1,7 +1,7 @@
 # tiagoporto.com
 
 <p align="center">
-<img src="./public/tiagoporto.png" width="200">
+<img src="https://images.weserv.nl/?url=github.com/tiagoporto.png?&w=200&mask=circle">
 </p>
 
 <p align="center">
