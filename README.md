@@ -1,6 +1,13 @@
 # tiagoporto.com
 
-WIP
+<p align="center">
+<img src="./public/tiagoporto.png" width="200">
+</p>
+
+<p align="center">
+My Personal Site<br>
+https://tiagoporto.com
+</p>
 
 ## 🧰 Stack
 
@@ -10,10 +17,12 @@ WIP
 ![vs code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIzLjE1IDIuNTg3IDE4LjIxLjIxYTEuNDk0IDEuNDk0IDAgMCAwLTEuNzA1LjI5bC05LjQ2IDguNjMtNC4xMi0zLjEyOGEuOTk5Ljk5OSAwIDAgMC0xLjI3Ni4wNTdMLjMyNyA3LjI2MUExIDEgMCAwIDAgLjMyNiA4Ljc0TDMuODk5IDEyIC4zMjYgMTUuMjZhMSAxIDAgMCAwIC4wMDEgMS40NzlMMS42NSAxNy45NGEuOTk5Ljk5OSAwIDAgMCAxLjI3Ni4wNTdsNC4xMi0zLjEyOCA5LjQ2IDguNjNhMS40OTIgMS40OTIgMCAwIDAgMS43MDQuMjlsNC45NDItMi4zNzdBMS41IDEuNSAwIDAgMCAyNCAyMC4wNlYzLjkzOWExLjUgMS41IDAgMCAwLS44NS0xLjM1MnptLTUuMTQ2IDE0Ljg2MUwxMC44MjYgMTJsNy4xNzgtNS40NDh2MTAuODk2eiIvPjwvc3ZnPg==)
 
 ![git](https://img.shields.io/badge/git-%23F05032?style=for-the-badge&logo=git&logoColor=white)
-![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-%23FE5196?style=for-the-badge&logo=conventional%20commits&logoColor=white)
 
 ![astro](https://img.shields.io/badge/astro-%230D0F15?style=for-the-badge&logo=astro&logoColor=BC52EE)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![css](https://img.shields.io/badge/css-%23FFFFFF?style=for-the-badge&logo=css&logoColor=663399)
+![mdx](https://img.shields.io/badge/mdx-%231B1F24?style=for-the-badge&logo=mdx&logoColor=fcb32c)
+![rss](https://img.shields.io/badge/rss-%231B1F24?style=for-the-badge&logo=rss&)
 
 ![EditorConfig](https://img.shields.io/badge/EditorConfig-%23E0EFEF.svg?style=for-the-badge&logo=editorconfig&logoColor=black)
 ![Prettier](https://img.shields.io/badge/Prettier-1A2B34.svg?style=for-the-badge&logo=prettier)
@@ -25,3 +34,38 @@ WIP
 ![Dependabot](https://img.shields.io/badge/dependabot-%23025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/Github%20Pages-%23222222?style=for-the-badge&logo=githubpages&logoColor=white)
+
+## 🛠 Development
+
+### Pre-requirements
+
+- [git](https://git-scm.com)
+- [asdf](https://asdf-vm.com/)
+
+### Install node
+
+### Install pnpm
+
+### Install dependencies
+
+```bash
+pnpm install
+```
+
+### Running dev server
+
+```bash
+pnpm dev
+```
+
+### Build
+
+```bash
+pnpm build
+```
+
+### Preview builded
+
+```bash
+pnpm preview
+```
