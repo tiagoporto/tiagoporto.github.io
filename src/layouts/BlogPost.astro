@@ -8,6 +8,8 @@ import { useI18n } from '../i18n/utils'
 
 const { lang, t } = useI18n(Astro.url)
 
+const giscusLang = lang.slice(0, 2)
+
 type Props = CollectionEntry<'blog'>['data']
 
 const { title, description, pubDate, updatedDate, heroImage, author } =
@@ -17,7 +19,7 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
 <html lang={lang}>
   <head>
     <BaseHead
-      title={`${t('site.title')} | ${title}`}
+      title={`${title} | ${t('site.title')}`}
       description={description}
     />
     <style>
@@ -95,6 +97,24 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
           </header>
 
           <slot />
+
+          <script
+            src="https://giscus.app/client.js"
+            data-repo="tiagoporto/tiagoporto.github.io"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxNjU1MzMxMzM="
+            data-category="Post Comments"
+            data-category-id="DIC_kwDOCd3Vzc4CqDkg"
+            data-mapping="title"
+            data-strict="1"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="light"
+            data-lang={giscusLang}
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async
+            data-astro-rerun></script>
         </div>
       </article>
     </main>
