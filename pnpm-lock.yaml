@@ -22,11 +22,11 @@ importers:
         version: 5.5.6(@types/node@22.15.3)(jiti@2.4.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.1)
     devDependencies:
       '@tiagoporto/dependabot-config':
-        specifier: ^1.5.2
-        version: 1.5.2
+        specifier: ^2.0.0
+        version: 2.0.0
       '@tiagoporto/editor-config':
-        specifier: ^1.4.0
-        version: 1.4.0
+        specifier: ^2.0.0
+        version: 2.0.0
       '@tiagoporto/prettier-config':
         specifier: ^2.0.0
         version: 2.0.0(prettier@3.5.3)
@@ -548,13 +548,15 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@tiagoporto/dependabot-config@1.5.2':
-    resolution: {integrity: sha512-NKeEipW+rugEl0libVnR/yQuZonGq7q/O3BFo+mP/ZXuERUSNLVuKbYVyEpxmjYYrSNT6WuKBAtQuO7QmCoqyQ==}
-    engines: {node: '>=18'}
+  '@tiagoporto/dependabot-config@2.0.0':
+    resolution: {integrity: sha512-L5Vf+xZJZ9o8K0zpDHN33RXFJ9t52x241pRQLMsAawr1uF8bBqp4Jou1560/zbqQQzQ2RZHmHrSAUbp5ZOacaA==}
+    engines: {node: '>=22'}
+    hasBin: true
 
-  '@tiagoporto/editor-config@1.4.0':
-    resolution: {integrity: sha512-j2OiGG0t4FXA+zpYRl9bZbpZErCA77PD6QBP9TEsLdrPcUoI/90W5vyrYFVY4ITMO+MCNIHYdmv13urhmUP2PQ==}
-    engines: {node: '>=18'}
+  '@tiagoporto/editor-config@2.0.0':
+    resolution: {integrity: sha512-IM3hCMve5k9DMGO/mnZMKrgO6e2R7zad6Knoh1dVFaRColo96/Nt/RaOHKhBR0VNMV5wuBel04v+fEVBwuYVgA==}
+    engines: {node: '>=22'}
+    hasBin: true
 
   '@tiagoporto/prettier-config@2.0.0':
     resolution: {integrity: sha512-Jec4b37dBL+i8SU6RWcMA4OHq2qB8V71DhaCaGwxiojsGTBPUpueAqSzsbPT3R/h/gg/4N+106GUcfktSdo78w==}
@@ -3114,9 +3116,9 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tiagoporto/dependabot-config@1.5.2': {}
+  '@tiagoporto/dependabot-config@2.0.0': {}
 
-  '@tiagoporto/editor-config@1.4.0': {}
+  '@tiagoporto/editor-config@2.0.0': {}
 
   '@tiagoporto/prettier-config@2.0.0(prettier@3.5.3)':
     dependencies:
