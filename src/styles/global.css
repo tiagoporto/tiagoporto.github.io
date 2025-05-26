@@ -30,6 +30,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 body {
   font-family: 'Atkinson', sans-serif;
   margin: 0;
@@ -48,6 +49,9 @@ main {
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;
+}
+abbr[title]:hover {
+  cursor: help;
 }
 h1,
 h2,
@@ -75,7 +79,8 @@ h5 {
   font-size: 1.25em;
 }
 strong,
-b {
+b,
+.bold {
   font-weight: 700;
 }
 a {
@@ -87,9 +92,7 @@ a:hover {
 p {
   margin-bottom: 1em;
 }
-.prose p {
-  margin-bottom: 2em;
-}
+
 textarea {
   width: 100%;
   font-size: 16px;
@@ -114,6 +117,7 @@ code {
   border-radius: 2px;
 }
 pre {
+  font-size: 0.85rem;
   padding: 1.5em;
   border-radius: 8px;
 }
@@ -138,6 +142,68 @@ hr {
   }
   main {
     padding: 1em;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 75%;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+table th,
+table td {
+  padding: 2px 4px;
+}
+
+table td {
+  border: 1px solid lightgrey;
+}
+
+.striped-row {
+  background-color: #969595;
+  color: #fff;
+}
+
+.striped-row td {
+  border: 1px solid #807e7e;
+}
+
+.striped tbody tr:nth-child(odd) {
+  background-color: #dedcdc;
+}
+
+.striped tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+kbd {
+  background-color: #b1b1b4;
+  color: #2c2d2e;
+  border-radius: 0.25rem;
+  border: 1px solid #3d3e42;
+  box-shadow: 0 2px 0 1px #3d3e42;
+  font-size: 0.75em;
+
+  cursor: default;
+  padding: 2px 5px;
+  position: relative;
+  top: -1px;
+
+  &:hover {
+    box-shadow: 0 1px 0 0.5px #3d3e42;
+    top: 1px;
   }
 }
 
