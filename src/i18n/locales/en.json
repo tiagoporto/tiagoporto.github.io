@@ -6,6 +6,7 @@
   "mainMenu": "Main menu",
   "languageSelector": "Language selector",
   "nav": { "home": "Home", "blog": "Blog" },
+  "commentsReactions": "Comments and reactions",
   "messages": { "emailCopied": "Email copied!" },
   "aboutMe": {
     "paragraph1": "Experienced Front-end Engineer and active Open Source contributor."

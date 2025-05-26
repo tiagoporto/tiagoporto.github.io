@@ -41,7 +41,7 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
         width: 720px;
         max-width: calc(100% - 2em);
         margin: auto;
-        padding: 1em;
+        padding: 0 1em;
         color: rgb(var(--gray-dark));
       }
       :global(.prose svg) {
@@ -51,7 +51,7 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
       }
       .title {
         margin-bottom: 1em;
-        padding: 1em 0;
+        padding: 0 0 1em 0;
         text-align: center;
         line-height: 1;
       }
@@ -102,6 +102,8 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
           </header>
 
           <slot />
+
+          <h2>{t('commentsReactions')}</h2>
 
           <script
             src="https://giscus.app/client.js"

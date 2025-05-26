@@ -31,6 +31,10 @@
   font-display: swap;
 }
 
+html {
+  font-size: 112.5%;
+}
+
 body {
   font-family: 'Atkinson', sans-serif;
   margin: 0;
@@ -40,8 +44,8 @@ body {
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  text-wrap: pretty;
   color: rgb(var(--gray-dark));
-  font-size: 20px;
   line-height: 1.7;
 }
 main {
@@ -64,19 +68,42 @@ h6 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 2.5em;
+  font-size: 3.144em;
 }
 h2 {
-  font-size: 2.441em;
+  font-size: 2.5em;
 }
 h3 {
-  font-size: 1.953em;
+  font-size: 1.988em;
 }
 h4 {
-  font-size: 1.563em;
+  font-size: 1.581em;
 }
 h5 {
-  font-size: 1.25em;
+  font-size: 1.257em;
+}
+h6 {
+  font-size: 1.2em;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 1.953em;
+  }
+  h3 {
+    font-size: 1.563em;
+  }
+  h4 {
+    font-size: 1.25em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1em;
+  }
 }
 strong,
 b,
@@ -112,6 +139,9 @@ figcaption {
   font-size: 80%;
 }
 code {
+  word-wrap: anywhere;
+  overflow-wrap: anywhere;
+  hyphens: none;
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
   border-radius: 2px;
