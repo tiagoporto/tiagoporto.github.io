@@ -149,7 +149,15 @@ hr {
   text-align: center;
 }
 
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
 table {
+  width: auto;
   text-align: center;
   line-height: 1.5;
   font-size: 75%;
@@ -159,12 +167,14 @@ table {
 table th {
   background-color: #555;
   color: #fff;
-  border: 1px solid #555;
+  border: 1px solid #969595;
+  font-weight: normal;
 }
 
 table th,
 table td {
-  padding: 2px 4px;
+  padding: 4px 8px;
+  min-width: 25px;
 }
 
 table td {
