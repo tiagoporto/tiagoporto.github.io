@@ -1,0 +1,56 @@
+<svg
+  viewBox="0 0 500 250"
+>
+  <text
+    transform="translate(317.5928 213.8892)"
+    style="font-family: ArialMT, Arial; font-size: 18px;"
+  >
+    <tspan x="0" y="0">N - Número</tspan>
+    <tspan x="0" y="22">S - Letra ou Número</tspan>
+  </text>
+  <text
+    transform="translate(35.6697 101.1807)"
+    style="font-family: ArialMT, Arial; font-size: 35px;"
+  >
+    <tspan x="10" y="0">SS.SSS.SSS</tspan>
+    <tspan x="226" y="0">/</tspan>
+    <tspan x="250" y="0">SSSS - NN</tspan>
+  </text>
+  <text
+    transform="translate(164.5335 158.958)"
+    style="font-family: ArialMT, Arial; font-size: 35px;"
+  >
+    <tspan x="-25" y="0" style="fill: #ce3505;">Raiz</tspan>
+    <tspan x="96" y="0">/</tspan>
+    <tspan x="115" y="0" style="fill: #093bdb;">Ordem</tspan>
+    <tspan x="226" y="0">-</tspan>
+    <tspan x="250" y="0" style="fill: #529306;">DV</tspan>
+  </text>
+  <rect
+    x="46"
+    y="110"
+    width="208"
+    height="8"
+    style="fill: #ce3505;"
+  />
+  <rect
+    x="283"
+    y="110"
+    width="97"
+    height="8"
+    style="fill: #093bdb;"
+  />
+  <rect
+    x="410"
+    y="110"
+    width="53"
+    height="8"
+    style="fill: #529306;"
+  />
+  <text
+    transform="translate(138.4197 28.6685)"
+    style="font-family: Arial-BoldMT, Arial; font-size: 24px; font-weight: 700;"
+  >
+    <tspan x="0" y="0">CNPJ Alfanumérico</tspan>
+  </text>
+</svg>

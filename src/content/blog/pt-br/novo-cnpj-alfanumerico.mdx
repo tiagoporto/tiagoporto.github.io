@@ -1,0 +1,625 @@
+---
+draft: false
+title: 'Novo CNPJ (Alfanumérico)'
+author: 'Tiago Porto'
+description: 'Detalhes do novo CNPJ conforme anunciado pela receita federal'
+pubDate: 'May 26 2025'
+heroImage: ''
+heroCaption: ''
+---
+
+<figure>
+  <img src="/blog/cnpj/novo-cnpj.png" alt="" />
+  <figcaption>Logo CNPJ alfanumérico</figcaption>
+</figure>
+
+Em vista à demanda por novos <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>s
+e a possibilidade do esgotamento dos números disponíveis, em 15 de outubro de 2024
+a Receita Federal Brasileira publicou uma instrução normativa
+([Instrução Normativa RFB nº 2.229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102))
+alterando o formato do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>.
+O novo formato agora incluirá letras e números.
+
+{/* prettier-ignore */}
+<svg
+  width="500"
+  heigfht="250"
+  viewBox="0 0 500 250"
+>
+  <text
+    transform="translate(317.5928 213.8892)"
+    style="font-family: ArialMT, Arial; font-size: 18px;"
+  >
+    <tspan x="0" y="0">N - Número</tspan>
+    <tspan x="0" y="22">S - Letra ou Número</tspan>
+  </text>
+  <text
+    transform="translate(35.6697 101.1807)"
+    style="font-family: ArialMT, Arial; font-size: 35px;"
+  >
+    <tspan x="10" y="0">SS.SSS.SSS</tspan>
+    <tspan x="226" y="0">/</tspan>
+    <tspan x="250" y="0">SSSS - NN</tspan>
+  </text>
+  <text
+    transform="translate(164.5335 158.958)"
+    style="font-family: ArialMT, Arial; font-size: 35px;"
+  >
+    <tspan x="-25" y="0" style="fill: #ce3505;">Raiz</tspan>
+    <tspan x="96" y="0">/</tspan>
+    <tspan x="115" y="0" style="fill: #093bdb;">Ordem</tspan>
+    <tspan x="226" y="0">-</tspan>
+    <tspan x="250" y="0" style="fill: #529306;">DV</tspan>
+  </text>
+  <rect
+    x="46"
+    y="110"
+    width="208"
+    height="8"
+    style="fill: #ce3505;"
+  />
+  <rect
+    x="283"
+    y="110"
+    width="97"
+    height="8"
+    style="fill: #093bdb;"
+  />
+  <rect
+    x="410"
+    y="110"
+    width="53"
+    height="8"
+    style="fill: #529306;"
+  />
+  <text
+    transform="translate(138.4197 28.6685)"
+    style="font-family: Arial-BoldMT, Arial; font-size: 24px; font-weight: 700;"
+  >
+    <tspan x="0" y="0">CNPJ Alfanumérico</tspan>
+  </text>
+</svg>
+
+O novo número continuará a ter 14 posições. As doze primeiras compostas por
+letras e números e as duas últimas posições correspondentes aos dígitos verificadores
+continuarão a ser numéricas.
+
+## Compatibilidade
+
+O novo formato é compatível com o anterior e todos <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>
+numéricos existentes permanecerão válidos.
+
+## Quando entra em vigor?
+
+Pela atual Instrução Normativa a previsão de implementação é a partir de julho de 2026.
+Se não houver adiamentos.
+
+## Algoritmo
+
+### Cálculo dos dígitos verificadores
+
+O <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> alfanumérico é
+composto por doze caracteres alfanuméricos e dois dígitos verificadores numéricos.
+Os dígitos verificadores (DV) são calculados a partir dos doze primeiros caracteres em duas
+etapas, utilizando o módulo de divisão 11 e pesos distribuídos de 2 a 9.
+
+### Cálculo do primeiro dígito verificador
+
+Para cada um dos caracteres do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>,
+atribuir o valor da coluna `Valor para cálculo do DV`, conforme a tabela abaixo
+(ou subtrair 48 do `Valor ASCII`):
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th>CNPJ Alfanumérico</th>
+      <th>Valor ASCII</th>
+      <th>Valor para cálculo do DV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>48</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>49</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>50</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>51</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>52</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>53</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>54</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>55</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>56</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>57</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>65</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>66</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>67</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>68</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>69</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>70</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>71</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>72</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>73</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>74</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>75</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>76</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>77</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>78</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>79</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>80</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>81</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>82</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>83</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>84</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>85</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>86</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>87</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>88</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>89</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>90</td>
+      <td>42</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="bold">Exemplo:</p>
+
+<table>
+  <tbody>
+    <tr class="striped-row">
+      <th>CNPJ</th>
+      <td>1</td>
+      <td>2</td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>D</td>
+      <td>E</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Valor</th>
+      <td>1</td>
+      <td>2</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
+
+Distribuir os pesos de 2 a 9 da direita para a esquerda (recomeçando depois do oitavo caracter),
+conforme o exemplo:
+
+<table>
+  <tbody>
+    <tr class="striped-row">
+      <th>CNPJ</th>
+      <td>1</td>
+      <td>2</td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <th>Valor</th>
+      <td>1</td>
+      <td>2</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+    <tr class="bold">
+      <th>Peso</th>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+      <td>9</td>
+      <td>8</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+Multiplicar valor e peso de cada coluna e somar todos os resultados:
+
+<table>
+  <tbody>
+    <tr class="striped-row">
+      <th>CNPJ</th>
+      <td>1</td>
+      <td>2</td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <th>Valor</th>
+      <td>1</td>
+      <td>2</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>Peso</th>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+      <td>9</td>
+      <td>8</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr class="bold">
+      <th>Multiplicação</th>
+      <td>5</td>
+      <td>8</td>
+      <td>51</td>
+      <td>36</td>
+      <td>171</td>
+      <td>24</td>
+      <td>28</td>
+      <td>30</td>
+      <td>0</td>
+      <td>4</td>
+      <td>60</td>
+      <td>42</td>
+    </tr>
+  </tbody>
+</table>
+
+{/* prettier-ignore */}
+<p class="center">Somatório <strong>(5+8+...+42) = 459</strong></p>
+
+Obter o resto da divisão do somatório por 11.
+Se o resto da divisão for igual a 1 ou 0, o primeiro dígito será igual a 0 (zero).
+Senão, o primeiro dígito será igual ao resultado de 11 – resto.
+
+<p class="bold">Exemplo:</p>
+
+{/* prettier-ignore */}
+<p class="center">Resto da divisão <strong>459/11 = 8</strong></p>
+
+<p class="bold center">1º DV = 3 (resultado de 11-8)</p>
+
+### Cálculo do segundo dígito verificador
+
+Para o cálculo do segundo dígito é necessário acrescentar o primeiro DV ao final do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>,
+formando assim treze caracteres, e repetir os passos realizados para o primeiro dígito.
+
+<p class="bold">Exemplo:</p>
+
+<table>
+  <tbody>
+    <tr class="striped-row">
+      <th>CNPJ</th>
+      <td>1</td>
+      <td>2</td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>D</td>
+      <td>E</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Atribuição de Valor</th>
+      <td>1</td>
+      <td>2</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Atribuição de Peso</th>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+      <td>9</td>
+      <td>8</td>
+      <td>7</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr class="bold">
+      <th>Multiplicação</th>
+      <td>6</td>
+      <td>10</td>
+      <td>68</td>
+      <td>54</td>
+      <td>38</td>
+      <td>27</td>
+      <td>32</td>
+      <td>35</td>
+      <td>0</td>
+      <td>5</td>
+      <td>80</td>
+      <td>63</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+
+{/* prettier-ignore */}
+<p class="center">Somatório <strong>(6+10+...+6) = 424</strong></p>
+
+{/* prettier-ignore */}
+<p class="center">Resto da divisão <strong>424/11 = 6</strong></p>
+
+<p class="bold center">2º DV = 5 (resultado de 11-6)</p>
+
+Resultado final: **12.ABC.345/01DE-35**
+
+## Ajustes técnicos para o CNPJ Alfanumérico
+
+## Banco de dados
+
+Os campos de <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> precisam ser ajustados
+para alfanuméricos caso sejam numéricos.
+
+## Interface
+
+### Máscara de validação
+
+Como mencionado, a máscara do novo <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> foi modificada, será necessário atualizar
+a máscara de validação dos <span lang="en">`<input>`</span>.
+
+O novo pattern:
+
+`[A-Z0-9]{2}.[A-Z0-9]{3}.[A-Z0-9]{3}/[A-Z0-9]{4}-[0-9]{2}`
+
+### Algoritmo de validação
+
+O algoritmo de atualização precisa ser atualizado para validar um <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>
+alfanumérico.
+
+Para facilitar disponibilizei uma <span lang="en">lib</span> em <span lang="en">TypeScript</span> com o novo algoritmo de validação
+([gerador-validador-cnpj](https://github.com/tiagoporto/gerador-validador-cpf/tree/main/packages/gerador-validador-cnpj)).
+
+![](/blog/cnpj/gerador-validador-cnpj.png)
+
+Basta instalar com <abbr title="Node Package Manager" lang="en">NPM</abbr>:
+
+```bash
+npm install gerador-validador-cnpj -D
+```
+
+E usar:
+
+```js
+import { validate as validadeCNPJ } from 'gerador-validador-cnpj'
+
+const isCNPJValid = validadeCNPJ('01234567890000')
+const isCNPJAlphanumericValid = validadeCNPJ('9ZW2JIM2OWTG85', {
+  validateAlphanumeric: true
+})
+const isFormattedCNPJValid = validadeCNPJ('01.234.567/8900-00')
+const isFormattedCNPJAlphanumericValid = validadeCNPJ('8I.S4O.LPO/PRD7-81', {
+  validateAlphanumeric: true
+})
+```
+
+Se estiver usando <span lang="en">Deno</span>, não precisa instalar só importar direto:
+
+```ts
+import { validate } from 'jsr:@tiagoporto/gerador-validador-cnpj'
+```
+
+Documentação completa no [<abbr title="Node Package Manager" lang="en">NPM</abbr>](https://www.npmjs.com/package/gerador-validador-cnpj)
+ou [<abbr title="JavaScript registry" lang="en">JSR</abbr>](https://jsr.io/@tiagoporto/gerador-validador-cnpj).
+
+## Referências
+
+- [CNPJ Alfanumérico](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/cnpj-alfanumerico)
+- [Instrução Normativa RFB nº 2.229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102)
+- [Cálculo dos dígitos verificadores de CNPJ alfanumérico](https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/documentos-tecnicos/cnpj/manual-dv-cnpj.pdf/view)
