@@ -9,7 +9,7 @@ heroCaption: ''
 ---
 
 <figure>
-  <img src="/blog/cnpj/novo-cnpj.png" alt="" />
+  <img src="/blog/cnpj/novo-cnpj.png" alt="Logo novo CNPJ alfanumérico" />
   <figcaption>Logo CNPJ alfanumérico</figcaption>
 </figure>
 
@@ -86,13 +86,13 @@ continuarão a ser numéricas.
 
 ## Compatibilidade
 
-O novo formato é compatível com o anterior e todos <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>
+O novo formato é compatível com o anterior e todos os <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>s
 numéricos existentes permanecerão válidos.
 
 ## Quando entra em vigor?
 
-Pela atual Instrução Normativa a previsão de implementação é a partir de julho de 2026.
-Se não houver adiamentos.
+Pela atual Instrução Normativa a previsão de implementação é a partir de julho de 2026,
+se não houver adiamentos.
 
 ## Algoritmo
 
@@ -595,7 +595,7 @@ O novo pattern:
 O algoritmo de atualização precisa ser atualizado para validar um <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>
 alfanumérico.
 
-Para facilitar disponibilizei uma <span lang="en">lib</span> em <span lang="en">TypeScript</span> com o novo algoritmo de validação
+Para facilitar, disponibilizei uma <span lang="en">lib</span> em <span lang="en">TypeScript</span> com o novo algoritmo de validação
 ([gerador-validador-cnpj](https://github.com/tiagoporto/gerador-validador-cpf/tree/main/packages/gerador-validador-cnpj)).
 
 ![](/blog/cnpj/gerador-validador-cnpj.png)
@@ -621,7 +621,7 @@ const isFormattedCNPJAlphanumericValid = validadeCNPJ('8I.S4O.LPO/PRD7-81', {
 })
 ```
 
-Se estiver usando <span lang="en">Deno</span>, não precisa instalar só importar direto:
+Se estiver usando <span lang="en">Deno</span>, não precisa instalar, só importar direto:
 
 ```ts
 import { validate } from 'jsr:@tiagoporto/gerador-validador-cnpj'
