@@ -33,6 +33,7 @@
 
 html {
   font-size: 112.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -63,6 +64,7 @@ h3,
 h4,
 h5,
 h6 {
+  position: relative;
   margin: 0 0 0.5rem 0;
   color: rgb(var(--black));
   line-height: 1.2;

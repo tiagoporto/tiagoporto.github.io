@@ -49,6 +49,23 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
         margin: 0 auto;
         max-width: 100%;
       }
+      /* Style the Markdown heading links. */
+      :global(.prose :is(h1, h2, h3, h4, h5, h6) > a) {
+        color: var(--black);
+        text-decoration: none;
+
+        &:hover:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          left: -0.55em;
+          top: 0.25em;
+          position: absolute;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z'></path></svg>");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+      }
       .title {
         margin-bottom: 1em;
         padding: 0 0 1em 0;
@@ -103,7 +120,11 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
 
           <slot />
 
-          <h2>{t('commentsReactions')}</h2>
+          <h2 id={t('commentsReactionsSlug')}>
+            <a href={`#${t('commentsReactionsSlug')}`}
+              >{t('commentsReactions')}</a
+            >
+          </h2>
 
           <script
             src="https://giscus.app/client.js"

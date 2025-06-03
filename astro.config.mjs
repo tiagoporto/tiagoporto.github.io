@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config'
 import mdx from '@astrojs/mdx'
+import { rehypeHeadingIds } from '@astrojs/markdown-remark'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+
 // import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
@@ -25,7 +28,18 @@ export default defineConfig({
   },
   trailingSlash: 'never',
   integrations: [
-    mdx(),
+    mdx({
+      rehypePlugins: [
+        rehypeHeadingIds,
+        [
+          rehypeAutolinkHeadings,
+          {
+            // Wrap the heading text in a link.
+            behavior: 'wrap',
+          },
+        ],
+      ],
+    }),
     // sitemap({
     //   i18n: {
     //     defaultLocale: 'en',
