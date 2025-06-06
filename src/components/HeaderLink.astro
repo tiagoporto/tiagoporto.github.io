@@ -14,7 +14,7 @@ const currentPath = pathname === '/' ? tp(pathname) : pathname
 const subpath = pathname.match(/[^\/]+/g)
 
 const isEqual = currentPath.replaceAll('/', '') === href?.replaceAll('/', '')
-const isSubpath = subpath?.[1] === subHref?.[1]
+const isSubpath = currentPath.includes(subHref?.[1])
 
 const isActive = isEqual || isSubpath
 ---
