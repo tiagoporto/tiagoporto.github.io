@@ -16,20 +16,6 @@
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
 }
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 html {
   font-size: 112.5%;
@@ -37,7 +23,10 @@ html {
 }
 
 body {
-  font-family: 'Atkinson', sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -110,7 +99,7 @@ h6 {
 strong,
 b,
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 a {
   color: var(--accent);
