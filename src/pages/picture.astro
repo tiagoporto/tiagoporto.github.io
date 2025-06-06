@@ -1,0 +1,18 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import { useI18n } from '../i18n/utils'
+
+const { t } = useI18n(Astro.url)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`${t('site.title')} | Picture`}
+      description={t('site.description')}
+    />
+    <meta http-equiv="refresh" content="0; url=/tiagoporto.png" />
+  </head>
+  <body></body>
+</html>
