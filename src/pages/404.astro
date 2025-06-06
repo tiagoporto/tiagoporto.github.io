@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+
+import Footer from '../components/Footer.astro'
+import BaseHead from '../components/BaseHead.astro'
+import { useI18n } from '../i18n/utils'
+
+const { t, homeLink } = useI18n(Astro.url)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`${t('site.title')} | 404`} description={t('404.title')} />
+
+    <style>
+      main {
+        text-align: center;
+        padding: 5rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <body>
+      <Header />
+      <main>
+        <h1>{t('404.title')}</h1>
+
+        <p><a href={homeLink}>{t('404.backHome')}</a></p>
+      </main>
+    </body>
+  </body>
+</html>

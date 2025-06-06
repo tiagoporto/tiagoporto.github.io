@@ -6,12 +6,16 @@
   "mainMenu": "Menu Principal",
   "languageSelector": "Selector de Idiomas",
   "nav": { "home": "Home", "blog": "Blog" },
-  "commentsReactions": "Comentários e reações",
-  "commentsReactionsSlug": "comentarios-e-reacoes",
-  "messages": { "emailCopied": "Email Copiado!" },
   "aboutMe": {
     "paragraph1": "Engenheiro Front-End experiente e colaborador open-source."
   },
+  "messages": { "emailCopied": "Email Copiado!" },
+  "404": {
+    "title": "Página não encontrada",
+    "backHome": "Voltar para Home"
+  },
+  "commentsReactions": "Comentários e reações",
+  "commentsReactionsSlug": "comentarios-e-reacoes",
   "footer": {
     "allRights": "Todos os direitos reservados.",
     "linkedin": "Ir para o perfil de Tiago Porto no Linkedin",
