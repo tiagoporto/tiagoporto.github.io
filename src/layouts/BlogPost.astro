@@ -45,6 +45,11 @@ const { title, description, pubDate, updatedDate, heroImage, author } =
         padding: 0 1em;
         color: rgb(var(--gray-dark));
       }
+      @media screen and (max-width: 768px) {
+        .prose {
+          width: 100%;
+        }
+      }
       :global(.prose svg) {
         display: block;
         margin: 0 auto;
