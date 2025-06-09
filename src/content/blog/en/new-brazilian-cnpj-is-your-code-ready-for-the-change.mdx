@@ -1,6 +1,6 @@
 ---
 draft: false
-title: 'Novo CNPJ (Alfanumérico)'
+title: 'New brazilian CNPJ: Is Your Code Ready for the Change?'
 author: 'Tiago Porto'
 description: 'Detalhes do novo CNPJ conforme anunciado pela receita federal'
 pubDate: 'May 26 2025'
@@ -10,15 +10,15 @@ heroCaption: ''
 
 <figure>
   <img src="/blog/cnpj/novo-cnpj.png" alt="Logo novo CNPJ alfanumérico" />
-  <figcaption>Logo CNPJ alfanumérico</figcaption>
+  <figcaption>CNPJ Alphanumeric Logo</figcaption>
 </figure>
 
-Em vista à demanda por novos <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>s
-e a possibilidade do esgotamento dos números disponíveis, em 15 de outubro de 2024
-a Receita Federal Brasileira publicou uma instrução normativa
-([Instrução Normativa RFB nº 2.229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102))
-alterando o formato do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>.
-O novo formato agora incluirá letras e números.
+Given the demand for new <abbr title="National Registry of Legal Entities">CNPJ</abbr>s
+and the chance of running out of available numbers,
+on October 15, 2024, the Brazilian Federal Revenue Service published a normative instruction
+([Normative Instruction RFB No. 2229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102))
+changing the format of the <abbr title="National Registry of Legal Entities">CNPJ</abbr>.
+The new format will now include letters and numbers.
 
 {/* prettier-ignore */}
 <svg
@@ -30,8 +30,8 @@ O novo formato agora incluirá letras e números.
     transform="translate(317.5928 213.8892)"
     style="font-family: ArialMT, Arial; font-size: 18px;"
   >
-    <tspan x="0" y="0">N - Número</tspan>
-    <tspan x="0" y="22">S - Letra ou Número</tspan>
+    <tspan x="0" y="0">N - Number</tspan>
+    <tspan x="0" y="22">S - Letter or Number</tspan>
   </text>
   <text
     transform="translate(35.6697 101.1807)"
@@ -45,11 +45,11 @@ O novo formato agora incluirá letras e números.
     transform="translate(164.5335 158.958)"
     style="font-family: ArialMT, Arial; font-size: 35px;"
   >
-    <tspan x="-25" y="0" style="fill: #ce3505;">Raiz</tspan>
+    <tspan x="-25" y="0" style="fill: #ce3505;">Root</tspan>
     <tspan x="96" y="0">/</tspan>
-    <tspan x="115" y="0" style="fill: #093bdb;">Ordem</tspan>
+    <tspan x="115" y="0" style="fill: #093bdb;">Order</tspan>
     <tspan x="226" y="0">-</tspan>
-    <tspan x="250" y="0" style="fill: #529306;">DV</tspan>
+    <tspan x="250" y="0" style="fill: #529306;">CD</tspan>
   </text>
   <rect
     x="46"
@@ -76,48 +76,46 @@ O novo formato agora incluirá letras e números.
     transform="translate(138.4197 28.6685)"
     style="font-family: Arial-BoldMT, Arial; font-size: 24px; font-weight: 700;"
   >
-    <tspan x="0" y="0">CNPJ Alfanumérico</tspan>
+    <tspan x="0" y="0">Alphanumeric CNPJ</tspan>
   </text>
 </svg>
 
-O novo número continuará a ter 14 posições. As doze primeiras compostas por
-letras e números e as duas últimas posições correspondentes aos dígitos verificadores
-continuarão a ser numéricas.
+The new number will continue to have 14 positions. The first twelve will be made up of
+letters and numbers and the last two corresponding to the verification digits will remain numeric.
 
-## Compatibilidade
+## Compatibility
 
-O novo formato é compatível com o anterior e todos os <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>s
-numéricos existentes permanecerão válidos.
+The new format is compatible with the previous one and all existing
+numeric <abbr title="National Registry of Legal Entities">CNPJ</abbr>s will remain
+valid.
 
-## Quando entra em vigor?
+## When does it come into force?
 
-Pela atual Instrução Normativa a previsão de implementação é a partir de julho de 2026,
-se não houver adiamentos.
+According to the current Normative Instruction, the forecast is July 2026, if there are no postponements.
 
-## Algoritmo
+## Algorithm
 
-### Cálculo dos dígitos verificadores
+### Calculating the check digits
 
-O <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> alfanumérico é
-composto por doze caracteres alfanuméricos e dois dígitos verificadores numéricos.
-Os dígitos verificadores (DV) são calculados a partir dos doze primeiros caracteres em duas
-etapas, utilizando o módulo de divisão 11 e pesos distribuídos de 2 a 9.
+The alphanumeric <abbr title="National Registry of Legal Entities">CNPJ</abbr> is made up
+of twelve alphanumeric characters and two numeric check digits. The check digits (CD)
+are calculated from the first twelve characters in two steps.
 
-### Cálculo do primeiro dígito verificador
+### Calculation of the first check digit
 
-Para cada um dos caracteres do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>,
-atribuir o valor da coluna `Valor para cálculo do DV`, conforme a tabela abaixo
-(ou subtrair 48 do `Valor ASCII`):
+For each of the <abbr title="National Registry of Legal Entities">CNPJ</abbr> characters,
+assign the value in the `Value to calculate CD`column, according to the table below
+(or subtract 48 from the `ASCII value`):
 
 <div class="table-wrapper">
   <table class="striped">
     <thead>
       <tr>
         {/* prettier-ignore */}
-        <th>CNPJ <br />Alfanumérico</th>
-        <th>Valor ASCII</th>
+        <th>Alphanumeric <br/> CNPJ</th>
+        <th>ASCII value</th>
         {/* prettier-ignore */}
-        <th>Valor para <br /> cálculo do DV</th>
+        <th>Value to calculate<br /> CD</th>
       </tr>
     </thead>
     <tbody>
@@ -305,7 +303,7 @@ atribuir o valor da coluna `Valor para cálculo do DV`, conforme a tabela abaixo
   </table>
 </div>
 
-<p class="bold">Exemplo:</p>
+<p class="bold">Example:</p>
 
 <div class="table-wrapper">
   <table>
@@ -328,7 +326,7 @@ atribuir o valor da coluna `Valor para cálculo do DV`, conforme a tabela abaixo
     </tbody>
     <tbody>
       <tr>
-        <th>Valor</th>
+        <th>Value</th>
         <td>1</td>
         <td>2</td>
         <td>17</td>
@@ -346,8 +344,8 @@ atribuir o valor da coluna `Valor para cálculo do DV`, conforme a tabela abaixo
   </table>
 </div>
 
-Distribuir os pesos de 2 a 9 da direita para a esquerda (recomeçando depois do oitavo caracter),
-conforme o exemplo:
+Distribute the importance values from 2 to 9 from right to left (starting again after
+the eighth character), as shown in the example:
 
 <div class="table-wrapper">
   <table>
@@ -368,7 +366,7 @@ conforme o exemplo:
         <td>E</td>
       </tr>
       <tr>
-        <th>Valor</th>
+        <th>Value</th>
         <td>1</td>
         <td>2</td>
         <td>17</td>
@@ -383,7 +381,7 @@ conforme o exemplo:
         <td>21</td>
       </tr>
       <tr class="bold">
-        <th>Peso</th>
+        <th>Importance</th>
         <td>5</td>
         <td>4</td>
         <td>3</td>
@@ -401,7 +399,7 @@ conforme o exemplo:
   </table>
 </div>
 
-Multiplicar valor e peso de cada coluna e somar todos os resultados:
+Multiply the value and importance of each column and sum up all the results:
 
 <div class="table-wrapper">
   <table>
@@ -422,7 +420,7 @@ Multiplicar valor e peso de cada coluna e somar todos os resultados:
         <td>E</td>
       </tr>
       <tr>
-        <th>Valor</th>
+        <th>Value</th>
         <td>1</td>
         <td>2</td>
         <td>17</td>
@@ -437,7 +435,7 @@ Multiplicar valor e peso de cada coluna e somar todos os resultados:
         <td>21</td>
       </tr>
       <tr>
-        <th>Peso</th>
+        <th>Importance</th>
         <td>5</td>
         <td>4</td>
         <td>3</td>
@@ -452,7 +450,7 @@ Multiplicar valor e peso de cada coluna e somar todos os resultados:
         <td>2</td>
       </tr>
       <tr class="bold">
-        <th>Multiplicação</th>
+        <th>Multiplication</th>
         <td>5</td>
         <td>8</td>
         <td>51</td>
@@ -471,25 +469,26 @@ Multiplicar valor e peso de cada coluna e somar todos os resultados:
 </div>
 
 {/* prettier-ignore */}
-<p class="center">Somatório <strong>(5+8+...+42) = 459</strong></p>
+<p class="center">Sum <strong>(5+8+...+42) = 459</strong></p>
 
-Obter o resto da divisão do somatório por 11.
-Se o resto da divisão for igual a 1 ou 0, o primeiro dígito será igual a 0 (zero).
-Senão, o primeiro dígito será igual ao resultado de 11 – resto.
+Obtain the remainder of the division of the sum by 11. If the remainder of the
+division is equal to 1 or 0, the first digit will be equal to 0 (zero). Otherwise,
+the first digit is equal to the result of 11 minus the remainder.
 
-<p class="bold">Exemplo:</p>
+<p class="bold">Example:</p>
 
 {/* prettier-ignore */}
-<p class="center">Resto da divisão <strong>459/11 = 8</strong></p>
+<p class="center">Remainder of the division <strong>459/11 = 8</strong></p>
 
-<p class="bold center">1º DV = 3 (resultado de 11-8)</p>
+<p class="bold center">1º CD = 3 (result of 11-8)</p>
 
-### Cálculo do segundo dígito verificador
+### Calculation of the second check digit
 
-Para o cálculo do segundo dígito é necessário acrescentar o primeiro DV ao final do <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>,
-formando assim treze caracteres, e repetir os passos realizados para o primeiro dígito.
+To calculate the second digit, it is necessary to add the first CD to the end of
+the <abbr title="National Registry of Legal Entities">CNPJ</abbr>, making thirteen
+characters, and repeat the steps for the first digit.
 
-<p class="bold">Exemplo:</p>
+<p class="bold">Example:</p>
 
 <div class="table-wrapper">
   <table>
@@ -511,7 +510,7 @@ formando assim treze caracteres, e repetir os passos realizados para o primeiro 
         <td>3</td>
       </tr>
       <tr>
-        <th>Atribuição de Valor</th>
+        <th>Value</th>
         <td>1</td>
         <td>2</td>
         <td>17</td>
@@ -527,7 +526,7 @@ formando assim treze caracteres, e repetir os passos realizados para o primeiro 
         <td>3</td>
       </tr>
       <tr>
-        <th>Atribuição de Peso</th>
+        <th>Importance</th>
         <td>6</td>
         <td>5</td>
         <td>4</td>
@@ -543,7 +542,7 @@ formando assim treze caracteres, e repetir os passos realizados para o primeiro 
         <td>2</td>
       </tr>
       <tr class="bold">
-        <th>Multiplicação</th>
+        <th>Multiplication</th>
         <td>6</td>
         <td>10</td>
         <td>68</td>
@@ -563,50 +562,49 @@ formando assim treze caracteres, e repetir os passos realizados para o primeiro 
 </div>
 
 {/* prettier-ignore */}
-<p class="center">Somatório <strong>(6+10+...+6) = 424</strong></p>
+<p class="center">Sum <strong>(6+10+...+6) = 424</strong></p>
 
 {/* prettier-ignore */}
-<p class="center">Resto da divisão <strong>424/11 = 6</strong></p>
+<p class="center">Remainder of the division <strong>424/11 = 6</strong></p>
 
-<p class="bold center">2º DV = 5 (resultado de 11-6)</p>
+<p class="bold center">2º CD = 5 (result of 11-6)</p>
 
-Resultado final: **12.ABC.345/01DE-35**
+Final result: **12.ABC.345/01DE-35**
 
-## Ajustes técnicos para o CNPJ Alfanumérico
+## Technical adjustments
 
-## Banco de dados
+### Database
 
-Os campos de <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> precisam ser ajustados
-para alfanuméricos caso sejam numéricos.
+The <abbr title="National Registry of Legal Entities">CNPJ</abbr> fields need to be
+set to alphanumeric if they are numeric.
 
-## Interface
+### Interface
 
-### Máscara de validação
+#### Validation mask
 
-Como mencionado, a máscara do novo <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr> foi modificada, será necessário atualizar
-a máscara de validação dos <span lang="en">`<input>`</span>.
+As mentioned, the mask of the new <abbr title="National Registry of Legal Entities">CNPJ</abbr>
+has been changed, so it will be necessary to update the validation mask of the `<input>`.
 
-O novo pattern:
+The new pattern:
 
 `[A-Z0-9]{2}.[A-Z0-9]{3}.[A-Z0-9]{3}/[A-Z0-9]{4}-[0-9]{2}`
 
-### Algoritmo de validação
+#### Validation algorithm
 
-O algoritmo de atualização precisa ser atualizado para validar um <abbr title="Cadastro Nacional da Pessoa Jurídica">CNPJ</abbr>
-alfanumérico.
+The validation algorithm needs to be updated to validate an alphanumeric <abbr title="National Registry of Legal Entities">CNPJ</abbr>.
 
-Para facilitar, disponibilizei uma <span lang="en">lib</span> em <span lang="en">TypeScript</span> com o novo algoritmo de validação
+To make things easier, I've released a TypeScript lib with the new algorithm
 ([gerador-validador-cnpj](https://github.com/tiagoporto/gerador-validador-cpf/tree/main/packages/gerador-validador-cnpj)).
 
-![](/blog/cnpj/gerador-validador-cnpj.png)
+![](/blog/cnpj/generator-validador-cnpj.png)
 
-Basta instalar com <abbr title="Node Package Manager" lang="en">NPM</abbr>:
+Install with <abbr title="Node Package Manager">NPM</abbr>:
 
 ```bash
 npm install gerador-validador-cnpj -D
 ```
 
-E usar:
+Use:
 
 ```js
 import { validate as validadeCNPJ } from 'gerador-validador-cnpj'
@@ -621,17 +619,17 @@ const isFormattedCNPJAlphanumericValid = validadeCNPJ('8I.S4O.LPO/PRD7-81', {
 })
 ```
 
-Se estiver usando <span lang="en">Deno</span>, não precisa instalar, só importar direto:
+If you're using Deno, you don't need to install it, just import:
 
 ```ts
 import { validate } from 'jsr:@tiagoporto/gerador-validador-cnpj'
 ```
 
-Documentação completa no [<abbr title="Node Package Manager" lang="en">NPM</abbr>](https://www.npmjs.com/package/gerador-validador-cnpj)
-ou [<abbr title="JavaScript registry" lang="en">JSR</abbr>](https://jsr.io/@tiagoporto/gerador-validador-cnpj).
+Complete documentation [<abbr title="Node Package Manager">NPM</abbr>](https://www.npmjs.com/package/gerador-validador-cnpj)
+or [<abbr title="JavaScript registry" >JSR</abbr>](https://jsr.io/@tiagoporto/gerador-validador-cnpj).
 
-## Referências
+## References
 
-- [CNPJ Alfanumérico](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/cnpj-alfanumerico)
-- [Instrução Normativa RFB nº 2.229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102)
-- [Cálculo dos dígitos verificadores de CNPJ alfanumérico](https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/documentos-tecnicos/cnpj/manual-dv-cnpj.pdf/view)
+- [CNPJ Alphanumeric](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/cnpj-alfanumerico)
+- [Normative Instruction RFB No. 2229](https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/141102)
+- [Calculation of alphanumeric CNPJ check digits](https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/documentos-tecnicos/cnpj/manual-dv-cnpj.pdf/view)

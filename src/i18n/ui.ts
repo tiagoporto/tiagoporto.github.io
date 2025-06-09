@@ -24,5 +24,7 @@ export const routes = {
     'blog.hybrid-apps-with-ionic-you-can-start-developing-now-talk':
       'blog.aplicativos-hibridos-com-ionic-voce-tambem-pode-comecar-a-desenvolver-agora-talk',
     'blog.saudade-typeface': 'blog.fonte-saudade',
+    'blog.new-brazilian-cnpj-is-your-code-ready-for-the-change':
+      'blog.novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca',
   },
 }

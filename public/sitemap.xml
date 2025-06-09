@@ -39,6 +39,13 @@
       href="https://tiagoporto.com/pt-br/blog/aplicativos-hibridos-com-ionic-voce-tambem-pode-comecar-a-desenvolver-agora-talk" />
   </url>
   <url>
+    <loc>https://tiagoporto.com/en/blog/new-brazilian-cnpj-is-your-code-ready-for-the-change</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://tiagoporto.com/en/blog/new-brazilian-cnpj-is-your-code-ready-for-the-change" />
+    <xhtml:link rel="alternate" hreflang="pt-BR"
+      href="https://tiagoporto.com/pt-br/blog/novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca" />
+  </url>
+  <url>
     <loc>https://tiagoporto.com/pt-br</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tiagoporto.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://tiagoporto.com/en" />
@@ -67,6 +74,14 @@
   </url>
   <url>
     <loc>
+      https://tiagoporto.com/pt-br/blog/novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://tiagoporto.com/en/blog/new-brazilian-cnpj-is-your-code-ready-for-the-change" />
+    <xhtml:link rel="alternate" hreflang="pt-BR"
+      href="https://tiagoporto.com/pt-br/blog/novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca" />
+  </url>
+  <url>
+    <loc>
       https://tiagoporto.com/pt-br/blog/engenharia-web-estado-da-arte-e-comparativo-com-a-engenharia-de-software-convencional</loc>
   </url>
   <url>
@@ -79,10 +94,6 @@
   <url>
     <loc>
       https://tiagoporto.com/pt-br/blog/tutorial-de-configuracao-do-ambiente-ionic-android-no-windows</loc>
-  </url>
-  <url>
-    <loc>
-      https://tiagoporto.com/pt-br/blog/novo-cnpj-alfanumerico</loc>
   </url>
   <url>
     <loc>
