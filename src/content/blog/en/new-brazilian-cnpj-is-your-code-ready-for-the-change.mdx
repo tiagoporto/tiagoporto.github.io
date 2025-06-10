@@ -1,6 +1,6 @@
 ---
 draft: false
-title: 'New brazilian CNPJ: Is Your Code Ready for the Change?'
+title: 'New Brazilian CNPJ: Is Your Code Ready for the Change?'
 author: 'Tiago Porto'
 description: 'Detalhes do novo CNPJ conforme anunciado pela receita federal'
 pubDate: 'May 26 2025'
@@ -80,26 +80,24 @@ The new format will now include letters and numbers.
   </text>
 </svg>
 
-The new number will continue to have 14 positions. The first twelve will be made up of
-letters and numbers and the last two corresponding to the verification digits will remain numeric.
+The new number will continue to have 14 positions. The first twelve positions will
+be alphanumeric, and the last two, the check digits, will remain numeric.
 
 ## Compatibility
 
-The new format is compatible with the previous one and all existing
+The new format is compatible with the previous one, and all existing
 numeric <abbr title="National Registry of Legal Entities">CNPJ</abbr>s will remain
 valid.
 
 ## When does it come into force?
 
-According to the current Normative Instruction, the forecast is July 2026, if there are no postponements.
+According to the current Normative Instruction, the forecast is July 2026, with no postponements.
 
 ## Algorithm
 
 ### Calculating the check digits
 
-The alphanumeric <abbr title="National Registry of Legal Entities">CNPJ</abbr> is made up
-of twelve alphanumeric characters and two numeric check digits. The check digits (CD)
-are calculated from the first twelve characters in two steps.
+The check digits (CD) are calculated in two steps using the first twelve characters.
 
 ### Calculation of the first check digit
 
@@ -484,9 +482,9 @@ the first digit is equal to the result of 11 minus the remainder.
 
 ### Calculation of the second check digit
 
-To calculate the second digit, it is necessary to add the first CD to the end of
-the <abbr title="National Registry of Legal Entities">CNPJ</abbr>, making thirteen
-characters, and repeat the steps for the first digit.
+To calculate the second digit, add the first check digit (CD) to the end of
+the <abbr title="National Registry of Legal Entities">CNPJ</abbr>, making it 13
+characters, then repeat the steps used for the first digit.
 
 <p class="bold">Example:</p>
 
@@ -575,8 +573,8 @@ Final result: **12.ABC.345/01DE-35**
 
 ### Database
 
-The <abbr title="National Registry of Legal Entities">CNPJ</abbr> fields need to be
-set to alphanumeric if they are numeric.
+<abbr title="National Registry of Legal Entities">CNPJ</abbr> fields, if
+numeric, must be converted to alphanumeric.
 
 ### Interface
 
@@ -593,7 +591,7 @@ The new pattern:
 
 The validation algorithm needs to be updated to validate an alphanumeric <abbr title="National Registry of Legal Entities">CNPJ</abbr>.
 
-To make things easier, I've released a TypeScript lib with the new algorithm
+For convenience, I've released a TypeScript lib with the new algorithm
 ([gerador-validador-cnpj](https://github.com/tiagoporto/gerador-validador-cpf/tree/main/packages/gerador-validador-cnpj)).
 
 ![](/blog/cnpj/generator-validador-cnpj.png)
@@ -625,7 +623,7 @@ If you're using Deno, you don't need to install it, just import:
 import { validate } from 'jsr:@tiagoporto/gerador-validador-cnpj'
 ```
 
-Complete documentation [<abbr title="Node Package Manager">NPM</abbr>](https://www.npmjs.com/package/gerador-validador-cnpj)
+Complete documentation on [<abbr title="Node Package Manager">NPM</abbr>](https://www.npmjs.com/package/gerador-validador-cnpj)
 or [<abbr title="JavaScript registry" >JSR</abbr>](https://jsr.io/@tiagoporto/gerador-validador-cnpj).
 
 ## References
