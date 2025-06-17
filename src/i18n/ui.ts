@@ -26,5 +26,7 @@ export const routes = {
     'blog.saudade-typeface': 'blog.fonte-saudade',
     'blog.new-brazilian-cnpj-is-your-code-ready-for-the-change':
       'blog.novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca',
+    'blog.ionic-android-environment-setup-tutorial-on-windows':
+      'blog.tutorial-de-configuracao-do-ambiente-ionic-android-no-windows',
   },
 }

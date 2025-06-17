@@ -1,124 +1,149 @@
 ---
-draft: true
+draft: false
 title: 'Ionic + Android environment setup tutorial on Windows'
 author: 'Tiago Porto'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Step by step on how to set up an environment with Ionic + Android on Windows.'
 pubDate: 'Dec 27 2015'
 heroImage: '/blog/ionic-android-enviroment-tutorial/ionic-windows.jpg'
 heroCaption: ''
 ---
 
-This post will respond to a request made by a developer related to my talk
-https://speakerdeck.com/tiagoporto/aplicativos-hibridos-com-ionic-voce-tambem-pode-comecar-a-desenvolver-agora
-(Hybrid applications with Ionic. You can also start developing now!). He was unsure of how to set up the environment
-to develop for Android.
+This post is in response to a request made by a developer in addition to my talk
+[Hybrid apps with Ionic. You can start developing now!](https://tiagoporto.com/en/blog/hybrid-apps-with-ionic-you-can-start-developing-now-talk/).
 
-So let’s get right down to business.
+So let's get straight to the point.
 
-1.  Of course we need the Ionic and Apache Cordova, if you have not installed them, let’s do it.
+1.  Ionic and Apache Cordova is required, so if you haven't installed them yet, let's go.
 
-    - Both are Node packages and so we need the Node installed. Download from https://nodejs.org/en/download/.
-    - In the installation NPM is required, do not remove it.
+    - Both are Node packages and we need to install them.
+      Download it from https://nodejs.org/en/download.
+    - **Do not uncheck <abbr title="Node Package Manager">NPM</abbr>**.
+
       ![Nodejs setup screen](/blog/ionic-android-enviroment-tutorial/node-setup-screen.png)
 
-    > If you don’t know what is Node and NPM, visit http://nodebr.com/o-que-e-a-npm-do-nodejs/
+      _Does not know what Node and <abbr title="Node Package Manager">NPM</abbr> are.
+      Read: [Node.js vs NPM: Understanding the Differences](https://hostadvice.com/blog/web-hosting/node-js/node-js-vs-npm/)._
 
-1.  With the Node installed, now we open the terminal and install the Ionic and Cordova.
+2.  With Node installed, now let's move on, open the terminal and install Ionic and Cordova.
 
-    - Runs
+    - Execute the command:
 
     ```bash
     npm install -g cordova ionic
     ```
 
-    ![Ionic install and ionic getting started page on background](/blog/ionic-android-enviroment-tutorial/ionic-install.png)
+    ![Terminal with Ionic installation and Ionic Getting Started page in the background](/blog/ionic-android-enviroment-tutorial/ionic-install.png)
 
-1.  We begin setting up the environment for Android. We will install the Java JDK.
+3.  Let's begin setting up the Android environment.
+    Let's install the Java <abbr title="Java Development Kit">JDK</abbr>.
 
-    - Access the link http://www.oracle.com/technetwork/java/javase/downloads/index.html, select JDK download,
-      download the version compatible with your OS (32 or 64 bits). _See the path where you installed,
-      it will be needed at the next step_.
-    - Now let’s create the **JAVA_HOME** variable in the Windows environment.
-      Open the System screen using the “windows + pause / break” or go to
-      “Control Panel / System and Security / System”.
-    - Click “Advanced System Settings”.
-    - Select Environment Variables.
-    - Select New environment variable.
-    - In the new window, in the name of the variable place **JAVA_HOME**, and in
-      the value put the path where you installed the JDK. For example,
-      **C:\Program Files\Java\jdk1.8.0_65**. Click OK.
-      ![Windows Edit System Var Path](/blog/ionic-android-enviroment-tutorial/adding-system-var.png)
-    - Select the **path** variable, and click edit. Again, a window will open
-      with the variable data. In the variable field values, go to the end of the
-      string and add **;%JAVA_HOME%\bin**. Do not forget the `;`.
-      ![Adding new system var](/blog/ionic-android-enviroment-tutorial/adding-bin-system-var.png)
+    - Go to [Java Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html),
+      select <abbr title="Java Development Kit">JDK</abbr> download, and choose the
+      version compatible with your <abbr title="Operating System">OS</abbr> (32 or 64 bits).
+      _Check the installation path; it will be necessary for the next step._
+    - Now we'll create the `JAVA_HOME` environment variable in Windows,
+      open the System Panel with the <kbd>windows</kbd> + <kbd>pause/break</kbd>
+      keys or go to `Control Panel / System and Security / System`.
+    - Click on `Advanced system settings`.
+    - Select `Environment Variables`.
+    - Select `New`.
+    - In the new window, enter `JAVA_HOME` in the variable name, and the path where
+      you installed the <abbr title="Java Development Kit">JDK</abbr> in the value.
+      For instance, `C:\Program Files\Java\jdk1.8.0_65`.
+    - Save.
 
-1.  With Java configured, now we need the Apache Ant, responsible for making the
-    build of our application. Download at the link http://ant.apache.org/bindownload.cgi.
+      ![Windows with the path to edit environment variables in Windows](/blog/ionic-android-enviroment-tutorial/adding-system-var.png)
 
-    - After finished downloading, extract the directory to the root of `C:`.
-    - Again we need to update the path variable to add the Ant. Open the environment variables from Windows again.
-    - Abra as variáveis de ambiente do windows novamente.
-    - Select Environment Variables.
-    - Select the **path** variable and click edit.
-    - Add the path to the bin directory of the Ant, for example,
-      `;C:\apache-ant-1.9.6\bin`. Again, do not forget the `;`.
-      ![System var edit modal](/blog/ionic-android-enviroment-tutorial/adding-ant-system-var.png)
+    - Select the `Path` variable, and click on edit,
+      in the variable values field, add `;%JAVA_HOME%\bin` to the end of the string.
+      Don't forget the `;`.
+    - Save.
 
-1.  The next step is to install the Android SDK, the API that provides libraries
-    and tools required to build, test and debug Android.
+      ![Windows variable edit panel](/blog/ionic-android-enviroment-tutorial/adding-bin-system-var.png)
 
-    - Download in http://developer.android.com/sdk/index.html#Other, select the
-      **.exe** (Recommended).
-    - Once installed, we need to create the variable `ANDROID_HOME`, necessary for
-      Cordova. Again, open the environment variables from Windows.
-    - Select Environment Variables.
+4.  With Java configured, we will need Apache Ant, he one responsible for the build.
+    Download it at [Ant Download](http://ant.apache.org/bindownload.cgi).
+
+    - Once the download is complete, extract the directory to the `C:`.
+    - Once again we need to update the `Path` variable to add Ant.
+      Open the Windows environment variables.
+    - Select `Environment variables`.
+    - Select the `Path` variable and click edit.
+    - Add the path to the Ant bin folder, for example `;C:\apache-ant-1.9.6\bin`.
+      And don't forget the `;`.
+    - Save
+
+      ![Edit Windows variable panel adding Ant path](/blog/ionic-android-enviroment-tutorial/adding-ant-system-var.png)
+
+5.  The next step is the installation of the Android <abbr title="Software Development Kit">SDK</abbr>,
+    the API which provides the libraries and tools needed to build, test and
+    debug Android.
+
+    - Download it from the [Android SDK](http://developer.android.com/sdk/index.html#Other),
+      select the **.exe (Recommended)**.
+    - Once installed, we need to create the `ANDROID_HOME` variable,
+      required by Cordova. Open the environment variables.
+    - Select `Environment variables`.
     - Click New.
-    - In the new window, in the name of the variable place `ANDROID_HOME`, and in the
-      variable value put the path to the `android-sdk` folder you just installed,
-      for example: `C:\Android\android-sdk`. Click OK.
-      ![System var edit modal](/blog/ionic-android-enviroment-tutorial/android-home-var.png)
-    - Return to environment variables, select the variable `path`, and click edit.
-      In the new window in the variable value field, go to the end of the string
-      and add `;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools`.
-    - We’re almost there, now we need to install the android packages. Open
-      `SDK Manager.exe` file, located inside the `android-sdk` folder.
-    - By default the `Tools/Android SDK Tools` is already installed. If for some
-      reason it is not marked as installed, select it. Also, select
-      `Tools/Android SDK Platform-tool`, `Tools/SDK build-tools` (a version above 22),
-      and select the same **API** version that you selected in the `Build Tools`.
-      Also mark `Extras/Google USB Driver` (required to debug directly on the device),
-      and click install.
+    - In the new window, in the variable name, enter `ANDROID_HOME`, in the
+      variable value, enter the path to the `android-sdk` folder you just installed,
+      for instance: `C:\Android\android-sdk`.
+    - Save.
+
+      ![Windows new system variable panel](/blog/ionic-android-enviroment-tutorial/android-home-var.png)
+
+    - Going back to the environment variables, select the `Path` variable and
+      click edit.
+    - Add `;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools` to variable value.
+    - Save.
+    - We're almost there, now we need to install the Android packages.
+      Open the `SDK Manager.exe` file, located inside the `android-sdk` folder.
+    - By default **Tools/Android SDK Tools** Tools is already installed.
+      If for some reason it isn't, select it.
+    - Check **Tools/Android SDK Platform-tool**, **Tools/SDK build-tools**
+      (one version above 22)
+    - Under **API** select the same version you selected in **Build Tools**.
+    - Under Extras, check **Google USB Driver**, which is required to
+      debug directly in the device.
+    - Click install.
+
       ![Android SDK Manager Panel](/blog/ionic-android-enviroment-tutorial/android-sdk-manager-panel.png)
-    - At the end of the installations our environment is set up.
 
-1.  Let’s do the test. Returning to our application, open the application directory for the terminal and add the android platform.
+    - Once the installations are finished, our environment is ready.
+
+6.  Now, let's add the Android platform to the app.
+
+    - Open the application directory via the terminal.
+    - Run:
+
+      ```bash
+      ionic platform add android
+      ```
+
+      ![Terminal installing the Android platform in the Ionic project](/blog/ionic-android-enviroment-tutorial/ionic-platform-add-android.png)
+
+7.  It's time to try the `.apk` build.
 
     - Run
 
-    ```bash
-    ionic platform add android
-    ```
+      ```bash
+      ionic build android
+      ```
 
-    ![Ionic add Android platform](/blog/ionic-android-enviroment-tutorial/ionic-platform-add-android.png)
+    - Once the process is complete, the generated `.apk` path is displayed in the terminal.
 
-1.  Let’s build our `.apk`.
+      ![Terminal building Android](/blog/ionic-android-enviroment-tutorial/ionic-build-android.png)
+
+8.  You can also debug the app direct on the device. Connect the device
+    via <abbr title="Universal Serial Bus">USB</abbr> cable, make sure you
+    have enabled **USB debugging** on the device.
 
     - Run
 
-    ```bash
-    ionic build android
-    ```
+      ```bash
+      ionic run android
+      ```
 
-    ![Ionic build Android](/blog/ionic-android-enviroment-tutorial/ionic-build-android.png)
+      ![Android device running the app, in the background, a monitor with the Developer tools panel and a terminal](/blog/ionic-android-enviroment-tutorial/run-android.jpg)
 
-    - After finishing the process, the path of the generated `.apk` is displayed in the terminal.
-
-1.  We can also debug the application directly on the device. Plug the device
-    via USB cable, make sure you have enabled the USB debugging, and run
-    ```bash
-    ionic run android
-    ```
-    ![Run Android](/blog/ionic-android-enviroment-tutorial/run-android.jpg)
-
-That’s it, Good luck and good development.
+That’s it, happy coding!
