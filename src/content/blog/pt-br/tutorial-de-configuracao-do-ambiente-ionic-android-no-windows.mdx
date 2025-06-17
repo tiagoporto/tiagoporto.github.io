@@ -18,8 +18,8 @@ Então, vamos direto ao que interessa.
 
     - Ambos são pacotes do <span lang="en-US">Node</span> e para isso precisamos instalá-lo.
       Faça o download em https://nodejs.org/en/download.
-    - Na instalação é necessário o <abbr title="Node Package Manager" lang="en-US">NPM</abbr>,
-      **não o remova**.
+    - **Não desmarque <abbr title="Node Package Manager" lang="en-US">NPM</abbr>**.
+
       ![Tela de setup do Nodejs](/blog/ionic-android-enviroment-tutorial/node-setup-screen.png)
 
       _Não sabe o que é <span lang="en-US">Node</span> e <abbr title="Node Package Manager" lang="en-US">NPM</abbr>.
@@ -42,13 +42,13 @@ Então, vamos direto ao que interessa.
         - Acesse [Java Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html),
           selecione <abbr title="Java Development Kit">JDK</abbr> download, faça o download
           da versão compatível com seu <abbr title="Sistema Operacional">SO</abbr> (32 ou 64 bits).
-          Veja o caminho de onde você instalou, será necessário no próximo passo.
+          _Veja o caminho de onde você instalou, será necessário no próximo passo._
         - Agora vamos criar a variável `JAVA_HOME` no ambiente do <span lang="en-US">Windows</span>,
-          abra a tela de sistema com as teclas <kbd lang="en-US">windows</kbd> + <kbd lang="en-US">pause/break</kbd>
+          abra a tela de Sistema com as teclas <kbd lang="en-US">windows</kbd> + <kbd lang="en-US">pause/break</kbd>
           ou vá em `Painel de Controle / Sistema e Segurança / Sistema`.
         - Clique em `Configurações avançadas do sistema`.
         - Selecione `Variáveis de ambiente`.
-        - Selecione `Nova variável de ambiente`.
+        - Selecione `Nova`.
         - Na nova janela, em nome da variável coloque `JAVA_HOME`, e no valor coloque
           o caminho onde você instalou o <abbr title="Java Development Kit">JDK</abbr>.
           Por exemplo, `C:\Program Files\Java\jdk1.8.0_65`.
@@ -80,12 +80,12 @@ Então, vamos direto ao que interessa.
 
       ![Tela de editar variável do Windows acrescentando o caminho do Ant](/blog/ionic-android-enviroment-tutorial/adding-ant-system-var.png)
 
-5.  O próximo passo é a instalação do <abbr title="Software Development Kit,">SDK</abbr>
+5.  O próximo passo é a instalação do <abbr title="Software Development Kit">SDK</abbr>
     do <span lang="en-US">Android</span>, a <abbr title="Application Programming Interface">API</abbr>
     que fornece as bibliotecas e ferramentas necessárias para <em lang="en-US">build</em>,
     teste e <em lang="en-US">debug</em> para <span lang="en-US">Android</span>.
 
-    - Faça o download em <a href="http://developer.android.com/sdk/index.html#Other" >Android SDK</a>,
+    - Faça o download em <a href="http://developer.android.com/sdk/index.html#Other" lang="en-US">Android SDK</a>,
       selecione o **.exe (Recommended)**.
     - Após instalado, precisamos criar a variável `ANDROID_HOME`, necessária para
       o Cordova. Abra as variáveis de ambiente.
@@ -106,9 +106,11 @@ Então, vamos direto ao que interessa.
       Abra o arquivo <code lang="en-US">SDK Manager.exe</code>, localizado dentro da pasta `android-sdk`.
     - Por padrão o <strong lang="en-US">Tools/Android SDK Tools</strong> já está instalado.
       Se por algum motivo não estiver, selecione-o.
-    - Selecione também <strong lang="en-US">Tools/Android SDK Platform-tool</strong>, <strong lang="en-US">Tools/SDK build-tools</strong> (uma versão acima da 22)
+    - Selecione <strong lang="en-US">Tools/Android SDK Platform-tool</strong>, <strong lang="en-US">Tools/SDK build-tools</strong>
+      (uma versão acima da 22)
     - Na **API** selecione a mesma versão que você selecionou no <strong lang="en-US">Build Tools</strong>.
-    - Em Extras, marque <strong lang="en-US">Google USB Driver</strong> (necessário para debugar direto no dispositivo),
+    - Em Extras, marque <strong lang="en-US">Google USB Driver</strong>,
+      necessário para debugar direto no dispositivo.
     - Clique em instalar.
 
       ![Painel do Android SDK Manager](/blog/ionic-android-enviroment-tutorial/android-sdk-manager-panel.png)
@@ -118,7 +120,6 @@ Então, vamos direto ao que interessa.
 6.  Vamos agora adicionar a plataforma <span lang="en-US">Android</span> ao aplicativo.
 
     - Abra o diretório do aplicativo pelo terminal.
-
     - Execute o commando:
 
       ```bash
@@ -141,7 +142,7 @@ Então, vamos direto ao que interessa.
 
 8.  Podemos também debugar o aplicativo direto no dispositivo. Conecte o dispositivo
     via cabo <abbr title="Universal Serial Bus">USB</abbr>, certifique de ter
-    habilitado o <strong lang="en-US">USB debugging</strong> no dispositivo
+    habilitado o <strong lang="en-US">USB debugging</strong> no dispositivo.
 
     - Execute:
 
@@ -149,6 +150,6 @@ Então, vamos direto ao que interessa.
       ionic run android
       ```
 
-      ![Dispositivo Android rodando aplicação no fundo monitor com a tela de Developer tools e terminando](/blog/ionic-android-enviroment-tutorial/run-android.jpg)
+      ![Dispositivo Android rodando o app, e no fundo, monitor com painel do Developer tools e um terminal](/blog/ionic-android-enviroment-tutorial/run-android.jpg)
 
 É isso aí, bom desenvolvimento!
