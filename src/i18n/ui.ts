@@ -28,5 +28,7 @@ export const routes = {
       'blog.novo-cnpj-seu-codigo-esta-preparado-para-a-mudanca',
     'blog.ionic-android-environment-setup-tutorial-on-windows':
       'blog.tutorial-de-configuracao-do-ambiente-ionic-android-no-windows',
+    'blog.optimization-and-dead-code-elimination-with-webpack-and-babeljs':
+      'blog.otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs',
   },
 }

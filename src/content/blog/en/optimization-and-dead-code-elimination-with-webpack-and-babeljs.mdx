@@ -1,0 +1,115 @@
+---
+draft: false
+title: 'Optimization and dead code elimination with webpack and Babeljs'
+author: 'Tiago Porto'
+description: 'Tree shaking and loose mode with Babeljs and webpack'
+pubDate: 'Jul 1 2018'
+heroImage: '/blog/babel-webpack/babel-plus-webpack.png'
+heroCaption: ''
+---
+
+## Tree Shaking
+
+Given the speed at which JavaScript is moving forward, having annual versions
+bringing new features, we ended up having to add a compiler
+([Babeljs](https://babeljs.io/), one of the most popular today) to our stack in
+order to take advantage of all these new features and ensure compatibility with
+older browsers.
+
+Within the stack, a bundler is commonly used to optimize and compile the final code.
+[Webpack](https://webpack.js.org/) is currently one of the most prominent among them. It offers several
+optimization options, but we're going to focus on one of them, [tree shaking](https://webpack.js.org/guides/tree-shaking/).
+
+Tree shaking is responsible for dead code elimination. Nevertheless, to preserve
+this functionality, [babel-loader](https://github.com/babel/babel-loader) must be
+configured correctly.
+
+First of all, let's understand what the problem is.
+
+A very simple example with <abbr title="ECMAScript modules">ESM</abbr>:
+
+```js
+// module.js
+export const say = () => console.log('Say something')
+
+export const scream = () => console.log('SCREAM SOMETHING')
+```
+
+```js
+// App entrypoint
+// index.js
+import { scream } from './module.js'
+
+scream()
+```
+
+In the `index.js` we only import the `scream` function from `module.js`.
+Since the application doesn't use the `say` function, including it in the bundle
+is unnecessary, and that's tree shaking purpose, dead code elimination.
+However, to leverage modern features (as in the example, ESM modules
+and arrow functions), while maintaining browser compatibility, Babeljs compiles
+this code to an earlier JavaScript version.
+
+Usually this is the basic configuration of Babeljs:
+
+```json
+{
+  "presets": ["env"]
+}
+```
+
+The only change needed is to set `modules` to `false`.
+
+```json
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ]
+  ]
+}
+```
+
+Basically, Babeljs compiles the code before webpack and converts the ES modules to
+CommonJS by default, then, when it reaches webpack, it can't take advantage
+of the native JavaScript modules.
+
+This is a simple example, but when the application gets bigger and makes use of a
+lot of libraries, it doesn't make sense to overload it with unused code.
+
+## Loose Mode
+
+Another tip: many of the Babeljs presets have a parameter called `loose`, and
+[babel-preset-env](https://babeljs.io/docs/en/babel-preset-env.html) is one of them.
+Essentially, Babeljs compiles code containing features unsupported in `ES5`,
+transforming them into an ES5-compatible version while preserving the original
+functionality and semantics. In `loose mode` Babeljs compiles to `ES5`,
+prioritizing reduced code size, often resulting in significantly smaller output.
+As our bundle will be interpreted directly in the browser or nodejs, strict semantic
+adherence is less critical, and we still maintain the source file.
+
+To enable:
+
+```jsonc
+// babel.config.js
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "loose": true
+      }
+    ]
+  ]
+}
+```
+
+Read [Babel: Loose mode](https://medium.com/reactbrasil/babel-loose-mode-b4c2092a84be)
+for some examples with code generated using `loose mode`.
+
+> PS. I recommend to be careful with `loose mode`, normally it's not recommended,
+> read the [pros and cons](https://2ality.com/2015/12/babel6-loose-mode.html) in more detail.

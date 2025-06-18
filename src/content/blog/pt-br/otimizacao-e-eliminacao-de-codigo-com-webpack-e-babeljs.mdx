@@ -2,33 +2,34 @@
 draft: false
 title: 'Otimização e eliminação de código com webpack e Babeljs'
 author: 'Tiago Porto'
-description: 'Como habilitar tree shaking e loose mode no Babeljs'
+description: 'Tree shaking e loose mode com Babeljs e webpack'
 pubDate: 'Jul 1 2018'
 heroImage: '/blog/babel-webpack/babel-plus-webpack.png'
 heroCaption: ''
 ---
 
-Com a velocidade a qual o <span lang="en-US">JavaScript</span> avança, tendo versões
-anuais acrescentando funcionalidades, acabamos por adicionar um compilador
-(<a href="https://babeljs.io/" lang="en-US" target="_blank">Babeljs</a> o mais comum deles) em
-nosso <em lang="en-US">workflow</em> para usufruirmos de todas essas novidades e
-mantermos a compatibilidade, e isso não tem problema nenhum.
+<h2 lang="en-US">Tree Shaking</h2>
 
-Junto ao compilador é comum usarmos também um <em lang="en-US">bundler</em> que se
-encarrega de gerar nosso código final aplicando diversas otimizações.
-O <a href="https://webpack.js.org/" lang="en-US" target="_blank">webpack</a> é um dos mais
-conhecidos <em lang="en-US">bundlers</em> <span lang="en-US">JavaScript</span>
-atualmente, e ele por si só já oferece várias opções de otimização, mas temos que
-estar atentos às nossas configurações.
+Com a velocidade a qual o <span lang="en-US">JavaScript</span> avança, tendo
+versões anuais adicionando funcionalidades, acabamos por adicionar um compilador
+(<a href="https://babeljs.io/" lang="en-US">Babeljs</a> um dos mais
+populares atualmente) em nossa <em lang="en-US">stack</em> para usufruirmos de
+todas essas novidades e manter compatibilidade com navegadores antigos.
 
-O <span lang="en-US">webpack</span> oferece uma funcionalidade chamada _[tree shaking](https://webpack.js.org/guides/tree-shaking/)_.
-Ela é responsável por eliminação de código não utilizado no nosso _bundle_.
-Porém, com a utilização do [babel-loader](https://github.com/babel/babel-loader),
-precisamos configura-ló corretamente para não perder essa funcionalidade.
+Na <em lang="en-US">stack</em> também é comum utilizarmos um <em lang="en-US">bundler</em>
+que se encarrega de gerar nosso código final aplicando diversas otimizações.
+O <a href="https://webpack.js.org/" lang="en-US">webpack</a> é um
+dos mais famosos atualmente, oferecendo várias opções de otimização,
+mas vamos focar em uma delas, o _<a href="https://webpack.js.org/guides/tree-shaking/" lang="en-US">tree shaking</a>_.
 
-Como exemplo, vamos entender qual é o problema, para depois entendermos a solução.
+O <em lang="en-US">tree shaking</em> é responsável pela eliminação de código não
+utilizado no nosso <em lang="en-US">bundle</em> o famoso <em lang="en-US">dead code</em>.
+Porém, com a utilização do <a href="https://github.com/babel/babel-loader" lang="en-US">babel-loader</a>,
+precisamos configurá-lo corretamente para não perder essa funcionalidade.
 
-Aqui basicamente é um exemplo com módulos <span lang="en-US">JavaScript</span>:
+Primeiramente vamos entender qual é o problema.
+
+Um simples exemplo com módulos <span lang="en-US">JavaScript</span>:
 
 ```js
 // module.js
@@ -38,19 +39,21 @@ export const scream = () => console.log('SCREAM SOMETHING')
 ```
 
 ```js
+// App entrypoint
 // index.js
 import { scream } from './module.js'
 
 scream()
 ```
 
-No `index.js` importamos somente a função `scream` do arquivo `module.js`. Como nossa
-aplicação não usa a função `say`, não faz sentido adicioná-la ao nosso _bundle_, e é
-isso o que faz o _tree shaking_ do <span lang="en-US">webpack</span>. Porém nosso módulo utiliza algumas coisas
-que precisam ser compiladas pelo <span lang="en-US">Babeljs</span> para não preocuparmos com retrocompatibilidade,
-e é ai que temos que ter cuidado.
+No `index.js` importamos somente a função `scream` do arquivo `module.js`. Como a
+aplicação não está usando a função `say`, não faz sentido adicioná-la ao <em lang="en-US">bundle</em>,
+e é isso o que faz o <em lang="en-US">tree shaking</em>, remover código não utilizado.
+Porém, para usufruir de novas funcionalidades (como no exemplo, <span lang="en-US"><abbr title="ECMAScript modules">ESM</abbr> modules</span> e <span lang="en-US">arrow functions</span>),
+para manter a compatibilidade com navegadores o <span lang="en-US">Babeljs</span>
+nos ajuda compilando esse código para uma versão anterior do <span lang="en-US">JavaScript</span>.
 
-Geralmente nossa configuração do <span lang="en-US">Babeljs</span> é essa:
+Geralmente a configuração básica do <span lang="en-US">Babeljs</span> é essa:
 
 ```json
 {
@@ -58,7 +61,7 @@ Geralmente nossa configuração do <span lang="en-US">Babeljs</span> é essa:
 }
 ```
 
-A única mudança que precisamos é setar o _modules_ para `false`.
+A única mudança que precisamos fazer é setar o `modules` para `false`.
 
 ```json
 {
@@ -73,26 +76,31 @@ A única mudança que precisamos é setar o _modules_ para `false`.
 }
 ```
 
-O que acontece é que o <span lang="en-US">Babeljs</span> compila o arquivo antes do <span lang="en-US">webpack</span>, e ele converte
-os módulos para **CommonJS** por _default_, e quando chega no <span lang="en-US">webpack</span> ele não consegue
+O que acontece é que o <span lang="en-US">Babeljs</span> compila o código antes
+do <span lang="en-US">webpack</span>, e converte os módulos para <span lang="en-US">CommonJS</span>
+por padrão, quando chega no <span lang="en-US">webpack</span> ele não consegue
 usufruir dos módulos nativos do <span lang="en-US">JavaScript</span>.
 
-Esse é um exemplo simples, mas quando sua aplicação cresce e utiliza muitas _libs_,
+Esse é um exemplo simples, mas quando sua aplicação cresce e utiliza muitas bibliotecas,
 não faz sentido onerar muito o carregamento com código não utilizado.
 
-Agora uma outra dica: muitos dos _presets_ do <span lang="en-US">Babeljs</span> possuem um parâmetro chamado
-`loose`, e o [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env.html) é um deles.
-Basicamente o que acontece na compilação do <span lang="en-US">Babeljs</span> é que quando ele encontra uma
-funcionalidade não suportada na versão `es5`, ele compila essa parte do código para `es5`
-mantendo a funcionalidade e semântica do código fonte no código compilado. O que o
-`loose mode` faz é compilar para es5, porém não se importando tanto para a semântica,
-e muitas vezes ele gera um código muito menor. Como o nosso _bundle_ vai ser interpretado
-diretamente no navegador ou no nodejs, não precisamos nos importar tanto com a
-semântica aqui, já que continuamos dando manutenção no arquivo fonte.
+<h2 lang="en-US">Loose Mode</h2>
+
+Uma outra dica: muitos dos <span lang="en-US">presets</span> do <span lang="en-US">Babeljs</span>
+possuem um parâmetro chamado <code lang="en-US">loose</code>, e o <a href="https://babeljs.io/docs/en/babel-preset-env.html" lang="en-US">babel-preset-env</a>
+é um deles. Basicamente o que acontece na compilação do <span lang="en-US">Babeljs</span> é,
+quando uma funcionalidade não é suportada na versão `ES5`, ele compila essa parte
+do código para `ES5` mantendo a funcionalidade e semântica do código fonte. O que
+o <code lang="en-US">loose mode</code> faz é compilar para `ES5`, porém não se
+importando tanto para a semântica, e muitas vezes ele gera um código muito menor.
+Como o nosso <em lang="en-US">bundle</em> vai ser interpretado diretamente no navegador
+ou no nodejs, não precisamos nos importar tanto com a semântica aqui, já que
+continuamos dando manutenção no arquivo fonte.
 
 Para habilitar:
 
-```json
+```jsonc
+// babel.config.js
 {
   "presets": [
     [
@@ -106,7 +114,8 @@ Para habilitar:
 }
 ```
 
-Para alguns exemplos de código gerado pelo `loose mode` leia
-[Babel: Loose mode](https://medium.com/reactbrasil/babel-loose-mode-b4c2092a84be).
+Para alguns exemplos de código gerado pelo <code lang="en-US">loose mode</code>
+leia <a href="https://medium.com/reactbrasil/babel-loose-mode-b4c2092a84be" lang="en-US">Babel: Loose mode</a>.
 
-> PS. Sugiro cuidado com `loose mode`, em alguns casos o código gerado pode modificar a funcionalidade.
+> PS. Sugiro cuidado com <code lang="en-US">loose mode</code>, não chega a ser recomendado
+> leia com melhor detalhes [prós e cons](https://2ality.com/2015/12/babel6-loose-mode.html).

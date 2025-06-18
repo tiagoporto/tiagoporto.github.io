@@ -53,6 +53,14 @@
       href="https://tiagoporto.com/pt-br/blog/tutorial-de-configuracao-do-ambiente-ionic-android-no-windows" />
   </url>
   <url>
+    <loc>
+      https://tiagoporto.com/en/blog/optimization-and-dead-code-elimination-with-webpack-and-babeljs</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://tiagoporto.com/en/blog/optimization-and-dead-code-elimination-with-webpack-and-babeljs" />
+    <xhtml:link rel="alternate" hreflang="pt-BR"
+      href="https://tiagoporto.com/pt-br/blog/otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs" />
+  </url>
+  <url>
     <loc>https://tiagoporto.com/pt-br</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tiagoporto.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://tiagoporto.com/en" />
@@ -97,14 +105,18 @@
   </url>
   <url>
     <loc>
+      https://tiagoporto.com/pt-br/blog/otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs</loc>
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://tiagoporto.com/en/blog/optimization-and-dead-code-elimination-with-webpack-and-babeljs" />
+    <xhtml:link rel="alternate" hreflang="pt-BR"
+      href="https://tiagoporto.com/pt-br/blog/otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs" />
+  </url>
+  <url>
+    <loc>
       https://tiagoporto.com/pt-br/blog/engenharia-web-estado-da-arte-e-comparativo-com-a-engenharia-de-software-convencional</loc>
   </url>
   <url>
     <loc>https://tiagoporto.com/pt-br/blog/fonte-saudade</loc>
-  </url>
-  <url>
-    <loc>
-      https://tiagoporto.com/pt-br/blog/otimizacao-e-eliminacao-de-codigo-com-webpack-e-babeljs</loc>
   </url>
   <url>
     <loc>
