@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.2.3
-        version: 4.2.3(astro@5.14.3(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1))
+        version: 4.2.3(astro@5.14.5(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1))
       '@astrojs/rss':
         specifier: ^4.0.11
         version: 4.0.11
@@ -18,8 +18,8 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1
       astro:
-        specifier: ^5.14.3
-        version: 5.14.3(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1)
+        specifier: ^5.14.5
+        version: 5.14.5(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1)
     devDependencies:
       '@astrojs/markdown-remark':
         specifier: ^6.3.2
@@ -799,8 +799,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.14.3:
-    resolution: {integrity: sha512-iRvl3eEYYdSYA195eNREjh43hqMMwKY1uoHYiKfLCB9G+bjFtaBtDe8R0ip7AbTD69wyOKgUCOtMad+lkOnT/w==}
+  astro@5.14.5:
+    resolution: {integrity: sha512-EHt7y3+nHYyKzBats1AL3N4Pyrvqyr+zXBC7njUa9Tfe+gsiHlunaw+lXitTT/DDVwO2R/f/qVG7Xc6rl0b2KQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2948,12 +2948,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.3(astro@5.14.3(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1))':
+  '@astrojs/mdx@4.2.3(astro@5.14.5(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.14.3(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1)
+      astro: 5.14.5(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3487,7 +3487,7 @@ snapshots:
 
   '@types/estree-jsx@1.0.5':
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.7
 
   '@types/estree@1.0.7': {}
 
@@ -3599,7 +3599,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.14.3(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1):
+  astro@5.14.5(@types/node@24.7.2)(jiti@2.4.2)(rollup@4.52.4)(typescript@5.8.2)(yaml@2.7.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
