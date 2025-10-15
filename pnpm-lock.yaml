@@ -28,14 +28,14 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0
       '@tiagoporto/editor-config':
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.1.0
+        version: 2.1.0
       '@tiagoporto/prettier-config':
-        specifier: ^2.0.0
-        version: 2.0.0(prettier@3.5.3)
+        specifier: ^2.1.0
+        version: 2.1.0(prettier@3.5.3)
       '@tiagoporto/remark-config':
-        specifier: ^1.7.0
-        version: 1.7.0(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)
+        specifier: ^1.11.0
+        version: 1.11.0(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -637,20 +637,20 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@tiagoporto/editor-config@2.0.0':
-    resolution: {integrity: sha512-IM3hCMve5k9DMGO/mnZMKrgO6e2R7zad6Knoh1dVFaRColo96/Nt/RaOHKhBR0VNMV5wuBel04v+fEVBwuYVgA==}
-    engines: {node: '>=22'}
+  '@tiagoporto/editor-config@2.1.0':
+    resolution: {integrity: sha512-fEeYPPH/Ti9YgnTb2r8j9aW2Tyx3/FwgesF/g7dLqyGsn3R05PSw9CAC551kdj0/XjAJV6xQ+uSvShchHpWiug==}
+    engines: {node: '>=20'}
     hasBin: true
 
-  '@tiagoporto/prettier-config@2.0.0':
-    resolution: {integrity: sha512-Jec4b37dBL+i8SU6RWcMA4OHq2qB8V71DhaCaGwxiojsGTBPUpueAqSzsbPT3R/h/gg/4N+106GUcfktSdo78w==}
-    engines: {node: '>=18'}
+  '@tiagoporto/prettier-config@2.1.0':
+    resolution: {integrity: sha512-n/cRD+L6XJ9fBgp+gFKASRzDdLdjonWfb2b9f4/F8t4HhiBawjgO4nsMxvJdgsR7qMYAYzLljBwwrn0NCpDRiA==}
+    engines: {node: '>=20'}
     peerDependencies:
       prettier: '>= 3'
 
-  '@tiagoporto/remark-config@1.7.0':
-    resolution: {integrity: sha512-qShSg/LTq2JURLV2Z5hTm+UhesCsYvpdqfrZUDkE4OM6pto2YLjZDvPhYL6qL0knh+4jR5uG0SXKxquV3u62pA==}
-    engines: {node: '>=18'}
+  '@tiagoporto/remark-config@1.11.0':
+    resolution: {integrity: sha512-UIf/Rl8NLibIMAzr24pCYdsXXDCzPIOY3h3eIqSm6QiD4TTt9rIaUBFZiVJ3yxqFuxmEvcYPNPkml+Y/PgvwgQ==}
+    engines: {node: '>=20'}
     peerDependencies:
       remark: ^15.0.0
       remark-cli: ^12.0.0
@@ -2061,8 +2061,8 @@ packages:
     resolution: {integrity: sha512-2NAEOACoTgo+e+YAaCTODqbrWyhMVmlUyjxNCkTrDRHHQvH6+NbrnqVvQaLH/Q8Ket3v90A43dgAJmXv8y5Tkw==}
     hasBin: true
 
-  remark-emoji@5.0.1:
-    resolution: {integrity: sha512-QCqTSvcZ65Ym+P+VyBKd4JfJfh7icMl7cIOGVmPMzWkDtdD8pQ0nQG7yxGolVIiMzSx90EZ7SwNiVpYpfTxn7w==}
+  remark-emoji@5.0.2:
+    resolution: {integrity: sha512-IyIqGELcyK5AVdLFafoiNww+Eaw/F+rGrNSXoKucjo95uL267zrddgxGM83GN1wFIb68pyDuAsY3m5t2Cav1pQ==}
     engines: {node: '>=18'}
 
   remark-frontmatter@5.0.0:
@@ -2230,6 +2230,9 @@ packages:
   remark-mdx@3.1.0:
     resolution: {integrity: sha512-Ngl/H3YXyBV9RcRNdlYsZujAmhsxwzxpDzpDEhFBVAGthS4GDgnctpDjgFl/ULx5UEDzqtW1cyBSNKqYYrqLBA==}
 
+  remark-mdx@3.1.1:
+    resolution: {integrity: sha512-Pjj2IYlUY3+D8x00UJsIOg5BEvfMyeI+2uLPn9VO9Wg4MEtN/VTIq2NEJQfde9PnX15KgtHyl9S0BcTnWrIuWg==}
+
   remark-message-control@8.0.0:
     resolution: {integrity: sha512-brpzOO+jdyE/mLqvqqvbogmhGxKygjpCUCG/PwSCU43+JZQ+RM+sSzkCWBcYvgF3KIAVNIoPsvXjBkzO7EdsYQ==}
 
@@ -2245,8 +2248,8 @@ packages:
   remark-preset-lint-recommended@7.0.1:
     resolution: {integrity: sha512-j1CY5u48PtZl872BQ40uWSQMT3R4gXKp0FUgevMu5gW7hFMtvaCiDq+BfhzeR8XKKiW9nIMZGfIMZHostz5X4g==}
 
-  remark-preset-prettier@2.0.1:
-    resolution: {integrity: sha512-1+cZaM080zTlhQIvZDOj7SFWvW9zevfxsLjTZspLEsBYivMDwCyTodvNvaZLc9p5dUSMik/BjMFKicfhZXh7qg==}
+  remark-preset-prettier@2.0.2:
+    resolution: {integrity: sha512-kTJRYWjcLBqVZZT49uEyWoZXb2DCIADITTizv7zj9SK/Msofl1syVqO7zcLlH6MCkXk3W0dyeKLcmiIyoLegkQ==}
     engines: {node: '>=14.8'}
     peerDependencies:
       prettier: '>=1.0.0'
@@ -2257,8 +2260,8 @@ packages:
   remark-rehype@11.1.2:
     resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
 
-  remark-retext@6.0.0:
-    resolution: {integrity: sha512-VYs0p+3G4DKm/KtWx7LV8YPbyX4CjBf1SZcEk2usEv3QK6JK4g5EfurDAPUmGVZOx/NcqOiNbozfGqpl2HQfTA==}
+  remark-retext@6.0.1:
+    resolution: {integrity: sha512-GZk8Fa/h88+OhmUlJuqEFX4Pi7OvgI3pq1bHyr/NJibTQxANH8/aZGoOflh4zDAwVDdvgoEk5XOJsWQ8UfjFnA==}
 
   remark-smartypants@3.0.2:
     resolution: {integrity: sha512-ILTWeOriIluwEvPjv67v7Blgrcx+LZOkAUVtKI3putuhlZm84FnqDORNXPPm+HY3NdZOMhyDwZ1E+eZB/Df5dA==}
@@ -3442,27 +3445,27 @@ snapshots:
 
   '@tiagoporto/dependabot-config@2.4.0': {}
 
-  '@tiagoporto/editor-config@2.0.0': {}
+  '@tiagoporto/editor-config@2.1.0': {}
 
-  '@tiagoporto/prettier-config@2.0.0(prettier@3.5.3)':
+  '@tiagoporto/prettier-config@2.1.0(prettier@3.5.3)':
     dependencies:
       prettier: 3.5.3
 
-  '@tiagoporto/remark-config@1.7.0(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)':
+  '@tiagoporto/remark-config@1.11.0(prettier@3.5.3)(remark-cli@12.0.1)(remark@15.0.1)':
     dependencies:
       remark: 15.0.1
       remark-cli: 12.0.1
-      remark-emoji: 5.0.1
+      remark-emoji: 5.0.2
       remark-frontmatter: 5.0.0
       remark-gfm: 4.0.1
       remark-lint-no-dead-urls: 2.0.1
       remark-lint-no-url-trailing-slash: 3.0.1
-      remark-mdx: 3.1.0
+      remark-mdx: 3.1.1
       remark-preset-lint-consistent: 6.0.1
       remark-preset-lint-markdown-style-guide: 6.0.1
       remark-preset-lint-recommended: 7.0.1
-      remark-preset-prettier: 2.0.1(prettier@3.5.3)
-      remark-retext: 6.0.0
+      remark-preset-prettier: 2.0.2(prettier@3.5.3)
+      remark-retext: 6.0.1
       remark-validate-links: 13.1.0
       retext-english: 5.0.0
       retext-equality: 7.1.0
@@ -3870,7 +3873,7 @@ snapshots:
       levenshtein-edit-distance: 3.0.1
       undici: 6.21.2
       unist-util-visit: 5.0.0
-      vfile-message: 4.0.2
+      vfile-message: 4.0.3
 
   debug@4.4.0:
     dependencies:
@@ -5403,7 +5406,7 @@ snapshots:
       - bluebird
       - supports-color
 
-  remark-emoji@5.0.1:
+  remark-emoji@5.0.2:
     dependencies:
       '@types/mdast': 4.0.4
       emoticon: 4.1.0
@@ -5658,7 +5661,7 @@ snapshots:
       unified-lint-rule: 3.0.1
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vfile-message: 4.0.2
+      vfile-message: 4.0.3
 
   remark-lint-no-duplicate-definitions@4.0.1:
     dependencies:
@@ -5900,6 +5903,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  remark-mdx@3.1.1:
+    dependencies:
+      mdast-util-mdx: 3.0.0
+      micromark-extension-mdxjs: 3.0.0
+    transitivePeerDependencies:
+      - supports-color
+
   remark-message-control@8.0.0:
     dependencies:
       '@types/mdast': 4.0.4
@@ -6007,7 +6017,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-preset-prettier@2.0.1(prettier@3.5.3):
+  remark-preset-prettier@2.0.2(prettier@3.5.3):
     dependencies:
       prettier: 3.5.3
 
@@ -6027,7 +6037,7 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  remark-retext@6.0.0:
+  remark-retext@6.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/nlcst': 2.0.3
