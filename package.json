@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@astrojs/markdown-remark": "^6.3.2",
-    "@tiagoporto/dependabot-config": "^2.4.0",
+    "@tiagoporto/dependabot-config": "^2.4.1",
     "@tiagoporto/editor-config": "^2.1.0",
     "@tiagoporto/prettier-config": "^2.1.0",
     "@tiagoporto/remark-config": "^1.11.0",
