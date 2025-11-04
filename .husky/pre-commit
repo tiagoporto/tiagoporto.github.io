@@ -1,2 +1,0 @@
-echo 'Running checks in staged files...'
-pnpm dlx lint-staged

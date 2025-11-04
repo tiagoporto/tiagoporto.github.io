@@ -4,6 +4,7 @@
   },
   "editor.formatOnSave": true,
   "prettier.documentSelectors": ["**/*.astro"],
+  "stylelint.validate": ["css", "scss"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

@@ -23,30 +23,33 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  background-size: 100% 600px;
+  color: rgb(var(--gray-dark));
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
-  color: rgb(var(--gray-dark));
   line-height: 1.7;
+  overflow-wrap: break-word;
+  text-align: left;
+  text-wrap: pretty;
+  word-wrap: break-word;
 }
+
 main {
   width: 720px;
   max-width: calc(100% - 2em);
-  margin: auto;
   padding: 3em 1em;
+  margin: auto;
 }
+
 abbr[title]:hover {
   cursor: help;
 }
+
 h1,
 h2,
 h3,
@@ -54,60 +57,76 @@ h4,
 h5,
 h6 {
   position: relative;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   color: rgb(var(--black));
   line-height: 1.2;
 }
+
 h1 {
-  font-size: 2.22222em;
+  font-size: 2.2222em;
 }
+
 h2 {
   font-size: 2em;
 }
+
 h3 {
-  font-size: 1.77778em;
+  font-size: 1.7778em;
 }
+
 h4 {
-  font-size: 1.555557em;
+  font-size: 1.5556em;
 }
+
 h5 {
   font-size: 1.257em;
 }
+
 h6 {
   font-size: 1.2em;
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   h1 {
-    font-size: 1.666669em;
+    font-size: 1.6667em;
     text-align: start;
   }
+
   h2 {
-    font-size: 1.555557em;
+    font-size: 1.5556em;
   }
+
   h3 {
-    font-size: 1.444445em;
+    font-size: 1.4444em;
   }
+
   h4 {
-    font-size: 1.38889em;
+    font-size: 1.3889em;
   }
+
   h5 {
     font-size: 1.2em;
   }
+
   h6 {
     font-size: 1em;
   }
 }
+
 strong,
 b,
 .bold {
   font-weight: 600;
 }
+
 a {
   color: var(--accent);
 }
+
 a:hover {
   color: var(--accent);
 }
+
 p {
   margin-bottom: 1em;
 }
@@ -116,52 +135,59 @@ textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
-table {
-  width: 100%;
-}
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
+
 figcaption {
   font-size: 80%;
 }
+
 code {
-  word-wrap: anywhere;
-  overflow-wrap: anywhere;
-  hyphens: none;
   padding: 2px 5px;
-  background-color: rgb(var(--gray-light));
   border-radius: 2px;
+  background-color: rgb(var(--gray-light));
+  hyphens: none;
+  overflow-wrap: anywhere;
+  word-wrap: anywhere;
 }
+
 pre {
-  font-size: 0.85rem;
   padding: 1.5em;
   border-radius: 8px;
+  font-size: 0.85rem;
 }
+
 pre > code {
   all: unset;
 }
+
 blockquote {
-  border-left: 4px solid var(--accent);
   padding: 0 0 0 20px;
-  margin: 0px;
+  border-left: 4px solid var(--accent);
+  margin: 0;
   font-size: 0.95em;
   line-height: 1.5;
   text-align: justify;
 }
+
 hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+
+@media (width <= 720px) {
   body {
     font-size: 18px;
   }
+
   main {
     padding: 1em;
   }
@@ -172,31 +198,31 @@ hr {
 }
 
 .table-wrapper {
-  max-width: 100%;
-  overflow-x: auto;
   display: flex;
+  max-width: 100%;
   justify-content: center;
+  overflow-x: auto;
 }
 
 table {
   width: auto;
-  text-align: center;
-  line-height: 1.5;
-  font-size: 75%;
   border-collapse: collapse;
+  font-size: 75%;
+  line-height: 1.5;
+  text-align: center;
 }
 
 table th {
+  border: 1px solid #969595;
   background-color: #555;
   color: #fff;
-  border: 1px solid #969595;
   font-weight: normal;
 }
 
 table th,
 table td {
-  padding: 4px 8px;
   min-width: 25px;
+  padding: 4px 8px;
 }
 
 table td {
@@ -217,42 +243,45 @@ table td {
 }
 
 .striped tbody tr:nth-child(even) {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 kbd {
-  background-color: #b1b1b4;
-  color: #2c2d2e;
-  border-radius: 0.25rem;
-  border: 1px solid #3d3e42;
-  box-shadow: 0 2px 0 1px #3d3e42;
-  font-size: 0.75em;
-
-  cursor: default;
-  padding: 2px 5px;
   position: relative;
   top: -1px;
+  padding: 2px 5px;
+  border: 1px solid #3d3e42;
+  border-radius: 0.25rem;
+  background-color: #b1b1b4;
+  box-shadow: 0 2px 0 1px #3d3e42;
+  color: #2c2d2e;
+  cursor: default;
+  font-size: 0.75em;
 
   &:hover {
-    box-shadow: 0 1px 0 0.5px #3d3e42;
     top: 1px;
+    box-shadow: 0 1px 0 0.5px #3d3e42;
   }
 }
 
 .sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
   position: absolute !important;
-  height: 1px;
-  width: 1px;
   overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+
   /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
   clip: rect(1px 1px 1px 1px);
+
   /* maybe deprecated but we need to support legacy browsers */
   clip: rect(1px, 1px, 1px, 1px);
+
   /* modern browsers, clip-path works inwards from each corner */
   clip-path: inset(50%);
+
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
