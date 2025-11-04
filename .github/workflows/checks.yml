@@ -45,9 +45,9 @@ jobs:
       #   if: success() || failure()
       #   run: pnpm typecheck
 
-      # - name: Lint Styles
-      #   if: success() || failure()
-      #   run: pnpm lint:styles
+      - name: Lint Styles
+        if: success() || failure()
+        run: pnpm lint:styles
 
       # - name: Lint
       #   if: success() || failure()
